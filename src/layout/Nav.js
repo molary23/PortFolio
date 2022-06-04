@@ -36,7 +36,7 @@ function Nav() {
                   } nav-link about-link`}
                   id="aboutlink"
                 >
-                  About
+                  Home
                 </span>
               </li>
               <li className="nav-item">
@@ -46,7 +46,7 @@ function Nav() {
                   } nav-link service-link`}
                   id="servicelink"
                 >
-                  Services
+                  About
                 </span>
               </li>
 
@@ -57,7 +57,29 @@ function Nav() {
                   } nav-link contact-link`}
                   id="contactlink"
                 >
-                  Contact
+                  Services
+                </span>
+              </li>
+
+              <li className="nav-item">
+                <span
+                  className={`${
+                    isActive === 3 ? "active-nav" : ""
+                  } nav-link contact-link`}
+                  id="contactlink"
+                >
+                  Projects
+                </span>
+              </li>
+
+              <li className="nav-item">
+                <span
+                  className={`${
+                    isActive === 4 ? "active-nav" : ""
+                  } nav-link contact-link`}
+                  id="contactlink"
+                >
+                  Qualification
                 </span>
               </li>
             </ul>

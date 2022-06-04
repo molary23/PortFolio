@@ -7,7 +7,7 @@
  Version:      1.0.0
 */
 
-@import "color.scss";
+@import "constants.scss";
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -20,7 +20,7 @@
   }
 }
 /*
-  2. Remove default margin
+  2. Remove default margin and set font
 */
 * {
   margin: 0;
