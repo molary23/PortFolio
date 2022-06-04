@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { InfoContext } from "../services/info.services";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
 function Home() {
+  const infoContext = useContext(InfoContext);
+  console.log(infoContext);
   return (
     <div className="home-page">
       <div className="container">

@@ -3,12 +3,15 @@ import "./styles/style.css";
 import Nav from "./layout/Nav";
 import Home from "./components/Home";
 
+import { InfoContext, InfoContextProvider } from "./services/info.services";
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Home />
-    </div>
+    <InfoContextProvider>
+      <div className="App">
+        <Nav />
+        <Home />
+      </div>
+    </InfoContextProvider>
   );
 }
 
