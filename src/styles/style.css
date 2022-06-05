@@ -194,4 +194,40 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.sub-footer {
+  min-height: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 0px;
+  background: rgba(151, 198, 252, 0.2);
+}
+
+.sub-footer .footer-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sub-footer .footer-intro h2 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sub-footer a {
+  text-decoration: none;
+}
+
+.sub-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-title {
+  text-transform: capitalize;
+}
+
+.footer-title span {
+  font-weight: 500;
+}
 /*# sourceMappingURL=style.css.map */

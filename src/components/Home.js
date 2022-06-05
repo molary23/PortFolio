@@ -11,7 +11,9 @@ function Home() {
         <div className="row">
           <div className="col-lg-7">
             <div className="intro-details">
-              <h1 className="intro-name">hassan a. adeola</h1>
+              <h1 className="intro-name" translate="no">
+                hassan a. adeola
+              </h1>
               <div className="info-role">
                 <h2 className="info-job-role">full stack web developer</h2>
               </div>
