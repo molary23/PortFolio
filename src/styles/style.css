@@ -147,6 +147,7 @@ textarea#contact-form-message {
   -webkit-box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
           box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
   border-radius: 5px;
+  margin: 20px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -304,7 +305,6 @@ textarea#contact-form-message {
   width: 200px;
   color: yellow;
   padding: 10px;
-  margin: 10px;
 }
 
 .skills .skill-card .skill-image {
@@ -351,6 +351,78 @@ textarea#contact-form-message {
   width: 100%;
   padding: 20px;
   background: #fff;
+}
+
+.services .service-image,
+.services .service-name {
+  text-align: center;
+}
+
+.services .service-name {
+  margin: 20px 0px;
+}
+
+.services .service-name h3 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+
+.services .service-content {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Project */
+.projects {
+  min-height: 800px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 0px;
+  background: yellow;
+}
+
+.projects .project-card {
+  min-height: 400px;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+}
+
+.projects .project-card .project-name {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.projects .project-card .project-name h3 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+
+.projects .project-card .project-type h5 {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.projects .project-card .project-image {
+  margin-top: 20px;
+}
+
+.projects .project-card .project-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+}
+
+.projects .project-card .project-details .project-stack {
+  margin-left: 10px;
+}
+
+.projects .project-card .project-details .project-title label {
+  font-weight: 600;
 }
 
 /*Sub Footer*/

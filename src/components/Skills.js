@@ -5,11 +5,11 @@ import Loader from "../layout/Loader";
 function Skills() {
   const { info, isLoading } = useContext(InfoContext);
 
-  let skill;
+  let skills;
   if (isLoading) {
-    skill = <Loader />;
+    skills = <Loader />;
   } else {
-    skill = info.skills.map((skill, i) => {
+    skills = info.skills.map((skill, i) => {
       return (
         <div className="col-lg-3 col-sm-4 col-6" key={i}>
           <div className="skill-card my-card">
@@ -34,7 +34,7 @@ function Skills() {
         </div>
 
         <div className="container">
-          <div className="row">{skill}</div>
+          <div className="row">{skills}</div>
         </div>
       </div>
     </div>

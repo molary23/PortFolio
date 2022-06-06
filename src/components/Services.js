@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
+import { InfoContext } from "../services/info.services";
+import Loader from "../layout/Loader";
 
 function Services() {
+  const { info, isLoading } = useContext(InfoContext);
+
+  let services;
+  if (isLoading) {
+    services = <Loader />;
+  } else {
+    services = info.services.map((service, i) => {
+      return (
+        <div className="col-lg-4 col-12" key={i}>
+          <div className="service-card my-card">
+            <div className="service-image">
+              <img src={service.image} alt={service.name} />
+            </div>
+            <div className="service-name">
+              <h3>{service.name}</h3>
+            </div>
+            <div className="service-content">
+              <p>{service.content}</p>
+            </div>
+          </div>
+        </div>
+      );
+    });
+  }
   return (
     <div className="services">
       <div className="my-services">
@@ -9,19 +35,7 @@ function Services() {
           <h2>what I can do for you</h2>
         </div>
         <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col-12">
-              <div className="service-card my-card">
-                <div className="service-image">
-                  <img src={"service.image"} alt={"service.name"} />
-                </div>
-                <div className="service-name">
-                  <h3>Web Dev</h3>
-                </div>
-                <div className="service-text"></div>
-              </div>
-            </div>
-          </div>
+          <div className="row">{services}</div>
         </div>
       </div>
     </div>

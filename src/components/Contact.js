@@ -1,13 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { InfoContext } from "../services/info.services";
+import Loader from "../layout/Loader";
+
 import TextAreaField from "../layout/TextAreaField";
 import TextInputField from "../layout/TextInputField";
-
+import Modal from "../layout/Modal";
 function Contact() {
   const [inputs, setInputs] = useState({}),
     [errors, setErrors] = useState({}),
     [loading, setLoading] = useState(false),
     [modal, setModal] = useState(false),
-    [sender, setSender] = useState(null);
+    [sender, setSender] = useState(null),
+    { info, isLoading } = useContext(InfoContext);
+
+  let connect, contact;
+  if (isLoading) {
+    contact = <Loader />;
+  } else {
+    let contacts = info.contacts;
+    contact = (
+      <div className="contact-details">
+        <div className="contact-icon"></div>
+        <div className="contact-info">{contacts.mail}</div>
+        <div className="contact-icon"></div>
+        <div className="contact-info">{contacts.phone}</div>
+        <div className="contact-icon"></div>
+        <div className="contact-info">{contacts.location}</div>
+        <div className="contact-icon"></div>
+        <div className="contact-info">{contacts.office}</div>
+      </div>
+    );
+    let connects = info.connects;
+
+    connect = connects.map((con, i) => {
+      return (
+        <div className="connect-social" key={i}>
+          <a href={con.url} target="_blank" rel="noreferrer">
+            <img src={con.image} alt={"Hassan Adeola's " + con.name} />
+          </a>
+        </div>
+      );
+    });
+  }
+
+  const modalHandler = (close) => {
+    setModal(close);
+  };
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -96,7 +134,10 @@ function Contact() {
 
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-12"></div>
+            <div className="col-lg-6 col-12">
+              <div className="contact-info-card">{contact}</div>
+              <div className="connect-info-card">{connect}</div>
+            </div>
             <div className="col-lg-6 col-12">
               <form className="contact-form" onSubmit={submitHandler}>
                 <div className="container">
@@ -160,12 +201,24 @@ function Contact() {
                       />
                     </div>
                   </div>
+                  <button
+                    type="submit"
+                    className="btn default-btn btn-block btn-lg"
+                  >
+                    Send Message
+                    {loading && (
+                      <span className="spinner-border spinner-border-sm ms-2"></span>
+                    )}
+                  </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+      {modal ? (
+        <Modal onClick={modalHandler} modal={modal} sender={sender} />
+      ) : null}
     </div>
   );
 }

@@ -139,7 +139,7 @@ textarea#contact-form-message {
 .my-card {
   box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
   border-radius: nth($spacing, 2) / 2;
-
+  margin: nth($spacing, 3);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   &:hover {

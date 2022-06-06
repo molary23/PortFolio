@@ -117,7 +117,6 @@
     width: nth($box, 1);
     color: yellow;
     padding: nth($spacing, 2);
-    margin: nth($spacing, 2);
 
     .skill-image {
       height: 50%;
@@ -159,6 +158,66 @@
     width: 100%;
     padding: nth($spacing, 3);
     background: #fff;
+  }
+
+  .service-image,
+  .service-name {
+    text-align: center;
+  }
+
+  .service-name {
+    margin: nth($spacing, 3) 0px;
+    h3 {
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 1.25rem;
+    }
+  }
+  .service-content {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+/* Project */
+.projects {
+  min-height: nth($box, 4);
+  height: fit-content;
+  padding: nth($spacing, 4) 0px;
+  background: yellow;
+
+  .project-card {
+    min-height: nth($box, 2);
+    width: 100%;
+    padding: nth($spacing, 3);
+    background: #fff;
+
+    .project-name {
+      margin: nth($spacing, 3) 0px;
+      text-align: center;
+      h3 {
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 1.25rem;
+      }
+    }
+    .project-type h5 {
+      text-transform: capitalize;
+      font-size: 1rem;
+    }
+    .project-image {
+      margin-top: nth($spacing, 3);
+    }
+    .project-details {
+      display: flex;
+      height: 60px;
+      .project-stack {
+        margin-left: 10px;
+      }
+      .project-title label {
+        font-weight: 600;
+      }
+    }
   }
 }
 
