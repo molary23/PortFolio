@@ -2,9 +2,20 @@
 
 .top-nav {
   background: yellow;
-
   .nav-link {
-    border: 2px solid red;
+    &:after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      background: transparent;
+      transition: width 0.1s ease, background-color 0.1s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background: blue;
+    }
   }
 }
 
@@ -102,7 +113,6 @@
 
   .skill-card {
     border: 0.5px solid #fff;
-    border-radius: nth($spacing, 2);
     height: nth($box, 1);
     width: nth($box, 1);
     color: yellow;
@@ -126,6 +136,29 @@
       background: #fff;
       color: red;
     }
+  }
+}
+
+/* Contact */
+.contact {
+  min-height: nth($box, 2);
+  height: fit-content;
+  padding: nth($spacing, 4) 0px;
+  background: blue;
+}
+
+/* Service */
+.services {
+  min-height: nth($box, 4);
+  height: fit-content;
+  padding: nth($spacing, 4) 0px;
+  background: green;
+
+  .service-card {
+    min-height: nth($box, 2);
+    width: 100%;
+    padding: nth($spacing, 3);
+    background: #fff;
   }
 }
 

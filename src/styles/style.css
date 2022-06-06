@@ -99,10 +99,18 @@ section {
   height: fit-content;
 }
 
+textarea#contact-form-message {
+  height: 120px;
+}
+
 .section-heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-heading h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 50px;
 }
 
 .loader {
@@ -135,12 +143,37 @@ section {
   }
 }
 
+.my-card {
+  -webkit-box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
+          box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
+  border-radius: 5px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.my-card:hover {
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
 .top-nav {
   background: yellow;
 }
 
-.top-nav .nav-link {
-  border: 2px solid red;
+.top-nav .nav-link:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  -webkit-transition: width 0.1s ease, background-color 0.1s ease;
+  transition: width 0.1s ease, background-color 0.1s ease;
+}
+
+.top-nav .nav-link:hover:after {
+  width: 100%;
+  background: blue;
 }
 
 .home-page {
@@ -267,7 +300,6 @@ section {
 
 .skills .skill-card {
   border: 0.5px solid #fff;
-  border-radius: 10px;
   height: 200px;
   width: 200px;
   color: yellow;
@@ -292,6 +324,33 @@ section {
 .skills .skill-card:hover {
   background: #fff;
   color: red;
+}
+
+/* Contact */
+.contact {
+  min-height: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 0px;
+  background: blue;
+}
+
+/* Service */
+.services {
+  min-height: 800px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 0px;
+  background: green;
+}
+
+.services .service-card {
+  min-height: 400px;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
 }
 
 /*Sub Footer*/

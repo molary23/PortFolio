@@ -6,11 +6,10 @@ export const InfoContext = createContext();
 
 export const InfoContextProvider = ({ children }) => {
   const [info, setInfo] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const getInfo = () => {
-    setIsLoading(true);
     setTimeout(() => {
       pullInfo()
         .then((result) => {
