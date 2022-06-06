@@ -57,7 +57,7 @@ function Nav() {
                   } nav-link contact-link`}
                   id="contactlink"
                 >
-                  Services
+                  Skills
                 </span>
               </li>
 
@@ -79,7 +79,7 @@ function Nav() {
                   } nav-link contact-link`}
                   id="contactlink"
                 >
-                  Qualification
+                  Contact
                 </span>
               </li>
             </ul>

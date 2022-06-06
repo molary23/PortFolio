@@ -1,7 +1,11 @@
 @import "default.scss";
 
 .top-nav {
-  background: transparent;
+  background: yellow;
+
+  .nav-link {
+    border: 2px solid red;
+  }
 }
 
 .home-page {
@@ -73,7 +77,59 @@
   }
 }
 
-//Sub Footer
+/* About Me */
+.about {
+  min-height: nth($box, 2);
+  background: #fff;
+  padding: nth($spacing, 5) 0px;
+
+  .about-me {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/* Skills */
+.skills {
+  min-height: nth($box, 2);
+  background: red;
+  padding: nth($spacing, 5) 0px;
+
+  .my-skills {
+    text-align: center;
+  }
+
+  .skill-card {
+    border: 0.5px solid #fff;
+    border-radius: nth($spacing, 2);
+    height: nth($box, 1);
+    width: nth($box, 1);
+    color: yellow;
+    padding: nth($spacing, 2);
+    margin: nth($spacing, 2);
+
+    .skill-image {
+      height: 50%;
+
+      img {
+        width: 40%;
+        height: auto;
+        margin: 0px auto;
+      }
+    }
+    .skill-name {
+      margin-top: nth($spacing, 3);
+    }
+
+    &:hover {
+      background: #fff;
+      color: red;
+    }
+  }
+}
+
+/*Sub Footer*/
 .sub-footer {
   min-height: nth($box, 1);
   height: fit-content;
@@ -98,7 +154,7 @@
     }
   }
 }
-// Footer
+/* Footer */
 
 .footer-title {
   text-transform: capitalize;

@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import { InfoContext, InfoContextProvider } from "./services/info.services";
 import SubFooter from "./layout/SubFooter";
 import Footer from "./layout/Footer";
+import About from "./components/About";
+import Skills from "./components/Skills";
 function App() {
   return (
     <InfoContextProvider>
@@ -13,6 +15,8 @@ function App() {
         <section>
           <Nav />
           <Home />
+          <About />
+          <Skills />
           <SubFooter />
           <Footer />
         </section>

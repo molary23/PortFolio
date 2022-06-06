@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect, useMemo } from "react";
+import { pullInfo } from "./info.request";
 const URL = "https://www.hassanadeola.com/outbox/info.json";
 
 export const InfoContext = createContext();
@@ -8,17 +9,19 @@ export const InfoContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const getInfo = async () => {
+  const getInfo = () => {
     setIsLoading(true);
-    try {
-      setIsLoading(false);
-      const response = await fetch("info.json"),
-        data = await response.json();
-      setInfo(data);
-    } catch (error) {
-      setIsLoading(false);
-      setError(error);
-    }
+    setTimeout(() => {
+      pullInfo()
+        .then((result) => {
+          setIsLoading(false);
+          setInfo(result);
+        })
+        .catch((error) => {
+          setIsLoading(false);
+          setError(error);
+        });
+    }, 2000);
   };
   useEffect(() => {
     getInfo();

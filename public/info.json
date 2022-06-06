@@ -56,5 +56,57 @@
       "url": "https://www.github.com/molary23",
       "image": "url"
     }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "text": "",
+      "image": "https://hassanadeola.com/images/html.svg"
+    },
+    {
+      "name": "CSS",
+      "text": "",
+      "image": "https://hassanadeola.com/images/css.svg"
+    },
+    {
+      "name": "SASS",
+      "text": "",
+      "image": "https://hassanadeola.com/images/sass.svg"
+    },
+    {
+      "name": "JavaScript",
+      "text": "",
+      "image": "https://hassanadeola.com/images/js.svg"
+    },
+    {
+      "name": "PHP",
+      "text": "",
+      "image": "https://hassanadeola.com/images/php.svg"
+    },
+    {
+      "name": "MySQL",
+      "text": "",
+      "image": "https://hassanadeola.com/images/html.svg"
+    },
+    {
+      "name": "Node JS",
+      "text": "",
+      "image": "https://hassanadeola.com/images/node.svg"
+    },
+    {
+      "name": "React JS",
+      "text": "",
+      "image": "https://hassanadeola.com/images/react.svg"
+    },
+    {
+      "name": "Mongo DB",
+      "text": "",
+      "image": "https://hassanadeola.com/images/html.svg"
+    },
+    {
+      "name": "WordPress",
+      "text": "",
+      "image": "https://hassanadeola.com/images/wordpress.svg"
+    }
   ]
 }
