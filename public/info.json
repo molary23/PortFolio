@@ -28,33 +28,34 @@
     "mail": "a.adeolahassan@gmail.com",
     "phone": "+234 (0) 8074723199",
     "location": "Ogun, Nigeria",
-    "office": "remote"
+    "office": "remote",
+    "skype": "molary23"
   },
   "connects": [
     {
       "name": "facebook",
       "url": "https://www.facebook.com/molary",
-      "image": "url"
+      "image": "https://hassanadeola.com/images/facebook.svg"
     },
     {
       "name": "twitter",
       "url": "https://www.twitter.com/molary",
-      "image": "url"
+      "image": "https://hassanadeola.com/images/twitter.svg"
     },
     {
       "name": "instagram",
       "url": "https://www.instagram.com/iam_molary",
-      "image": "url"
+      "image": "https://hassanadeola.com/images/instagram.svg"
     },
     {
       "name": "linkedin",
       "url": "https://www.linkedin.com/in/molary",
-      "image": "url"
+      "image": "https://hassanadeola.com/images/linkedin.svg"
     },
     {
       "name": "github",
       "url": "https://www.github.com/molary23",
-      "image": "url"
+      "image": "https://hassanadeola.com/images/github.svg"
     }
   ],
   "skills": [
@@ -86,7 +87,7 @@
     {
       "name": "MySQL",
       "text": "",
-      "image": "https://hassanadeola.com/images/html.svg"
+      "image": "https://hassanadeola.com/images/mysql.svg"
     },
     {
       "name": "Node JS",
@@ -101,7 +102,7 @@
     {
       "name": "Mongo DB",
       "text": "",
-      "image": "https://hassanadeola.com/images/html.svg"
+      "image": "https://hassanadeola.com/images/mongodb.svg"
     },
     {
       "name": "WordPress",
@@ -111,10 +112,34 @@
     {
       "name": "JQuery",
       "text": "",
-      "image": "https://hassanadeola.com/images/wordpress.svg"
+      "image": "https://hassanadeola.com/images/jquery.svg"
+    },
+    {
+      "name": "Sequelize",
+      "text": "",
+      "image": "https://hassanadeola.com/images/sequelize.svg"
+    },
+    {
+      "name": "Photoshop",
+      "text": "",
+      "image": "https://hassanadeola.com/images/adobephotoshop.svg"
+    },
+    {
+      "name": "Illustrator",
+      "text": "",
+      "image": "https://hassanadeola.com/images/adobeillustrator.svg"
+    },
+    {
+      "name": "Adobe XD",
+      "text": "",
+      "image": "https://hassanadeola.com/images/adobexd.svg"
     }
   ],
-  "role": "full stack web developer",
+  "about": {
+    "role": "full stack web developer",
+    "image": "https://hassanadeola.com/images/mo.png"
+  },
+
   "projects": [
     {
       "name": "MIC Earn Business",

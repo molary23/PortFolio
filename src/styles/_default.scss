@@ -98,6 +98,11 @@ section {
   height: fit-content;
 }
 
+button {
+  border-radius: 0px !important;
+  height: 40px;
+}
+
 textarea#contact-form-message {
   height: 120px;
 }

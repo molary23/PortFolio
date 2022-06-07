@@ -99,6 +99,11 @@ section {
   height: fit-content;
 }
 
+button {
+  border-radius: 0px !important;
+  height: 40px;
+}
+
 textarea#contact-form-message {
   height: 120px;
 }
@@ -182,12 +187,12 @@ textarea#contact-form-message {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 600px;
-  padding: 50px 0px;
+  min-height: 400px;
+  padding: 50px 0px 0px;
 }
 
 .home-page .intro-details {
-  margin-top: 100px;
+  margin-top: 200px;
   text-transform: capitalize;
   /* Animation */
   /* The typing effect */
@@ -204,6 +209,7 @@ textarea#contact-form-message {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: 30px;
   margin-bottom: 20px;
 }
 
@@ -275,6 +281,17 @@ textarea#contact-form-message {
           align-items: center;
 }
 
+.home-page .intro-image {
+  margin-top: 50px;
+}
+
+.home-page .intro-image img {
+  width: 70%;
+  margin: 0px auto;
+  -webkit-filter: drop-shadow(1px 1px 3px #252525);
+          filter: drop-shadow(1px 1px 3px #252525);
+}
+
 /* About Me */
 .about {
   min-height: 400px;
@@ -334,6 +351,76 @@ textarea#contact-form-message {
   height: fit-content;
   padding: 50px 0px;
   background: blue;
+}
+
+.contact-connect-info {
+  margin-top: 50px;
+}
+
+.contact-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.contact-details .contact-icon {
+  border-radius: 2rem;
+  padding: 10px;
+  background: yellow;
+}
+
+.contact-details .contact-icon svg {
+  font-size: 2rem;
+}
+
+.contact-details .contact-info {
+  margin-left: 20px;
+}
+
+.contact-details .contact-location {
+  text-transform: uppercase;
+}
+
+.connect-info-card {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.connect-info-card img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submit-btn svg {
+  margin-left: 5px;
 }
 
 /* Service */

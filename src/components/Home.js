@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { InfoContext } from "../services/info.services";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 
-function Home() {
+function Home(props) {
+  const { homeRef } = props;
+  const { info, isLoading } = useContext(InfoContext);
   return (
-    <div className="home-page">
+    <div className="home-page" ref={homeRef}>
       <div className="container">
         <div className="row">
           <div className="col-lg-7">
@@ -13,7 +15,9 @@ function Home() {
                 hassan a. adeola
               </h1>
               <div className="info-role">
-                <h2 className="info-job-role">full stack web developer</h2>
+                {!isLoading && (
+                  <h2 className="info-job-role">{info.about.role}</h2>
+                )}
               </div>
 
               <div className="intro-buttons">
@@ -30,7 +34,17 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="col-lg-5"></div>
+          <div className="col-lg-5">
+            <div className="intro-image">
+              {!isLoading && (
+                <img
+                  src={info.about.image}
+                  alt="Hassan Azeez Adeola"
+                  className="my-image"
+                />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -5,8 +5,16 @@ import Loader from "../layout/Loader";
 import TextAreaField from "../layout/TextAreaField";
 import TextInputField from "../layout/TextInputField";
 import Modal from "../layout/Modal";
-function Contact() {
-  const [inputs, setInputs] = useState({}),
+
+import { BiMapPin } from "react-icons/bi";
+import { GoMailRead } from "react-icons/go";
+import { BsPhone } from "react-icons/bs";
+import { FiLoader } from "react-icons/fi";
+import { SiSkypeforbusiness } from "react-icons/si";
+
+function Contact(props) {
+  const { contactRef } = props,
+    [inputs, setInputs] = useState({}),
     [errors, setErrors] = useState({}),
     [loading, setLoading] = useState(false),
     [modal, setModal] = useState(false),
@@ -19,15 +27,37 @@ function Contact() {
   } else {
     let contacts = info.contacts;
     contact = (
-      <div className="contact-details">
-        <div className="contact-icon"></div>
-        <div className="contact-info">{contacts.mail}</div>
-        <div className="contact-icon"></div>
-        <div className="contact-info">{contacts.phone}</div>
-        <div className="contact-icon"></div>
-        <div className="contact-info">{contacts.location}</div>
-        <div className="contact-icon"></div>
-        <div className="contact-info">{contacts.office}</div>
+      <div>
+        <div className="contact-details">
+          <div className="contact-icon">
+            <GoMailRead />
+          </div>
+          <div className="contact-info">
+            <a href={`mailto:${contacts.mail}`}>{contacts.mail}</a>
+          </div>
+        </div>
+        <div className="contact-details">
+          <div className="contact-icon">
+            <BsPhone />
+          </div>
+          <div className="contact-info">
+            <a href={`tel:${contacts.phone}`}>{contacts.phone}</a>
+          </div>
+        </div>
+        <div className="contact-details">
+          <div className="contact-icon">
+            <SiSkypeforbusiness />
+          </div>
+          <div className="contact-info">
+            <a href={`skype:${contacts.skype}?chat`}>{contacts.skype}</a>
+          </div>
+        </div>
+        <div className="contact-details">
+          <div className="contact-icon">
+            <BiMapPin />
+          </div>
+          <div className="contact-info contact-location">{`${contacts.location} - open to ${contacts.office}`}</div>
+        </div>
       </div>
     );
     let connects = info.connects;
@@ -125,7 +155,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" ref={contactRef}>
       <div className="contact-me">
         <div className="section-heading">
           <h1>Contact Me</h1>
@@ -135,8 +165,10 @@ function Contact() {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-12">
-              <div className="contact-info-card">{contact}</div>
-              <div className="connect-info-card">{connect}</div>
+              <div className="contact-connect-info">
+                <div className="contact-info-card">{contact}</div>
+                <div className="connect-info-card">{connect}</div>
+              </div>
             </div>
             <div className="col-lg-6 col-12">
               <form className="contact-form" onSubmit={submitHandler}>
@@ -203,12 +235,10 @@ function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="btn default-btn btn-block btn-lg"
+                    className="btn submit-btn btn-block btn-success"
                   >
                     Send Message
-                    {loading && (
-                      <span className="spinner-border spinner-border-sm ms-2"></span>
-                    )}
+                    {!loading && <FiLoader />}
                   </button>
                 </div>
               </form>

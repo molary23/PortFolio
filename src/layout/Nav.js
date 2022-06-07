@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
-function Nav() {
-  const [display, setDisplay] = useState(false);
-  const [isActive, setIsActive] = useState(1);
+function Nav(props) {
+  const { homeRef, aboutRef, skillsRef, projectsRef, servicesRef, contactRef } =
+      props,
+    [display, setDisplay] = useState(false),
+    [isActive, setIsActive] = useState(1);
+
   return (
     <header>
       <nav
@@ -65,8 +68,8 @@ function Nav() {
                 <span
                   className={`${
                     isActive === 3 ? "active-nav" : ""
-                  } nav-link contact-link`}
-                  id="contactlink"
+                  } nav-link project-link`}
+                  id="projectlink"
                 >
                   Projects
                 </span>
@@ -76,6 +79,17 @@ function Nav() {
                 <span
                   className={`${
                     isActive === 4 ? "active-nav" : ""
+                  } nav-link service-link`}
+                  id="servicelink"
+                >
+                  Services
+                </span>
+              </li>
+
+              <li className="nav-item">
+                <span
+                  className={`${
+                    isActive === 5 ? "active-nav" : ""
                   } nav-link contact-link`}
                   id="contactlink"
                 >
