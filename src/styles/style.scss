@@ -2,6 +2,16 @@
 
 .top-nav {
   background: yellow;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    background: rgba(0, 0, 0, 0.8);
+  }
   .nav-link {
     &:after {
       content: "";
@@ -80,6 +90,7 @@
   .intro-buttons button {
     width: 30%;
     margin-right: nth($spacing, 2);
+    margin-bottom: nth($spacing, 2);
     span {
       display: flex;
       justify-content: space-evenly;
@@ -154,64 +165,63 @@
   height: fit-content;
   padding: nth($spacing, 4) 0px;
   background: blue;
-}
 
-.contact-connect-info {
-  margin-top: nth($spacing, 4);
-}
-
-.contact-details {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 80%;
-  margin-bottom: nth($spacing, 2);
-  .contact-icon {
-    border-radius: 40px;
-    padding: nth($spacing, 2);
-    background: yellow;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    i {
-      font-size: 20px;
-    }
+  .contact-connect-info {
+    margin-top: nth($spacing, 4);
   }
-  .contact-info {
-    margin-left: nth($spacing, 3);
 
-    a {
-      &:hover {
-        text-decoration: underline;
+  .contact-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin-bottom: nth($spacing, 2);
+    .contact-icon {
+      border-radius: 40px;
+      padding: nth($spacing, 2);
+      background: yellow;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      i {
+        font-size: 20px;
       }
     }
+    .contact-info {
+      margin-left: nth($spacing, 3);
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .contact-location {
+      text-transform: uppercase;
+    }
   }
-  .contact-location {
-    text-transform: uppercase;
+
+  .connect-info-card {
+    margin-top: nth($spacing, 4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    i {
+      margin-right: 15px;
+      color: red;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      margin-left: nth($spacing, 2) / 2;
+    }
   }
 }
-
-.connect-info-card {
-  margin-top: nth($spacing, 4);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  i {
-    margin-right: 15px;
-    color: red;
-  }
-}
-
-.submit-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  i {
-    margin-left: nth($spacing, 2) / 2;
-  }
-}
-
 /* Service */
 .services {
   min-height: nth($box, 4);
@@ -290,11 +300,27 @@
       display: flex;
       height: 60px;
       .project-stack {
-        margin-left: 10px;
+        margin-left: nth($spacing, 2);
       }
       .project-title label {
         font-weight: 600;
       }
+      .project-category {
+        margin-left: nth($spacing, 2);
+        p {
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .view-more {
+    display: flex;
+    justify-content: center;
+    margin-top: nth($spacing, 4);
+    .btn {
+      width: 20%;
     }
   }
 }

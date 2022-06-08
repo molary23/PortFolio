@@ -1,20 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { InfoContext } from "../services/info.services";
 
-function About() {
+function About(props) {
+  const { info } = useContext(InfoContext),
+    { aboutRef } = props;
   return (
-    <div className="about">
+    <div className="about" ref={aboutRef}>
       <div className="about-me">
         <div className="section-heading">
           <h1>About Me</h1>
+          <h2>a short story about me</h2>
         </div>
-        <p className="about-info">
-          Nisi sint adipisicing ea mollit minim velit minim aute consequat
-          minim. Eu aliqua aliquip mollit proident ullamco cupidatat nulla ex
-          cillum dolor esse. Laborum nisi aute anim ipsum proident voluptate.
-          Dolor voluptate reprehenderit dolor eu mollit labore duis irure enim.
-          Aliqua laboris veniam labore deserunt enim est. Amet ex ex Lorem
-          incididunt eu excepteur tempor.
-        </p>
+        <p className="about-info">{info.about.content}</p>
       </div>
     </div>
   );

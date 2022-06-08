@@ -14,7 +14,7 @@ function Modal(props) {
     content = (
       <div>
         <p className="mb-1">Thanks for Contacting Me.</p>
-        <p>You will receive a response soon.</p>
+        <p>You will receive a response from me soon.</p>
       </div>
     );
   }
@@ -32,9 +32,11 @@ function Modal(props) {
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">{title}</h4>
-              <button type="button" className="btn-close" onClick={closeModal}>
-                <i className="fa-solid fa-xmark" />
-              </button>
+              <button
+                type="button"
+                className="btn-close"
+                onClick={closeModal}
+              ></button>
             </div>
 
             <div className="modal-body">{content}</div>

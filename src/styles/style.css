@@ -99,7 +99,7 @@ section {
   height: fit-content;
 }
 
-button {
+.btn {
   border-radius: 0px !important;
   height: 40px;
 }
@@ -120,6 +120,13 @@ textarea#contact-form-message {
 .section-heading h1 {
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .my-card {
@@ -138,10 +145,50 @@ textarea#contact-form-message {
 
 .loader {
   text-align: center;
+  margin-top: 300px;
+}
+
+.regular-btn {
+  border: 1px solid #5ea1ed;
+  color: #5ea1ed;
+}
+
+.regular-btn:hover {
+  background: #5ea1ed;
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.outline-btn {
+  border: 1px solid #5ea1ed;
+  background: #5ea1ed;
+  color: #fff;
+}
+
+.outline-btn:hover {
+  border: 1px solid #5ea1ed;
+  background: #fff;
+  color: #5ea1ed;
+  font-weight: 500;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .top-nav {
   background: yellow;
+}
+
+.top-nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .top-nav .nav-link:after {
@@ -245,6 +292,7 @@ textarea#contact-form-message {
 .home-page .intro-buttons button {
   width: 30%;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .home-page .intro-buttons button span {
@@ -331,11 +379,11 @@ textarea#contact-form-message {
   background: blue;
 }
 
-.contact-connect-info {
+.contact .contact-connect-info {
   margin-top: 50px;
 }
 
-.contact-details {
+.contact .contact-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,7 +397,7 @@ textarea#contact-form-message {
   margin-bottom: 10px;
 }
 
-.contact-details .contact-icon {
+.contact .contact-details .contact-icon {
   border-radius: 40px;
   padding: 10px;
   background: yellow;
@@ -358,23 +406,23 @@ textarea#contact-form-message {
   text-align: center;
 }
 
-.contact-details .contact-icon i {
+.contact .contact-details .contact-icon i {
   font-size: 20px;
 }
 
-.contact-details .contact-info {
+.contact .contact-details .contact-info {
   margin-left: 20px;
 }
 
-.contact-details .contact-info a:hover {
+.contact .contact-details .contact-info a:hover {
   text-decoration: underline;
 }
 
-.contact-details .contact-location {
+.contact .contact-details .contact-location {
   text-transform: uppercase;
 }
 
-.connect-info-card {
+.contact .connect-info-card {
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,12 +435,12 @@ textarea#contact-form-message {
           justify-content: flex-start;
 }
 
-.connect-info-card i {
+.contact .connect-info-card i {
   margin-right: 15px;
   color: red;
 }
 
-.submit-btn {
+.contact .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,7 +452,7 @@ textarea#contact-form-message {
           align-items: center;
 }
 
-.submit-btn i {
+.contact .btn i {
   margin-left: 5px;
 }
 
@@ -505,6 +553,29 @@ textarea#contact-form-message {
 
 .projects .project-card .project-details .project-title label {
   font-weight: 600;
+}
+
+.projects .project-card .project-details .project-category {
+  margin-left: 10px;
+}
+
+.projects .project-card .project-details .project-category p {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.projects .view-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.projects .view-more .btn {
+  width: 20%;
 }
 
 /* Footer */

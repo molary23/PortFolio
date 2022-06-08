@@ -1,11 +1,12 @@
 import React, { useState, useContext } from "react";
 import { InfoContext } from "../services/info.services";
-import Loader from "../layout/Loader";
 
 import TextAreaField from "../layout/TextAreaField";
 import TextInputField from "../layout/TextInputField";
 import Modal from "../layout/Modal";
 
+const API_PATH =
+  "file:///Users/schoolofdisciples/Desktop/App/Port/my-port/info.php";
 function Contact(props) {
   const { contactRef } = props,
     [inputs, setInputs] = useState({}),
@@ -13,13 +14,9 @@ function Contact(props) {
     [loading, setLoading] = useState(false),
     [modal, setModal] = useState(false),
     [sender, setSender] = useState(null),
-    { info, isLoading } = useContext(InfoContext);
+    { info } = useContext(InfoContext);
 
-  let connect, contact;
-  if (isLoading) {
-    contact = <Loader />;
-  } else {
-    let contacts = info.contacts;
+  let contacts = info.contacts,
     contact = (
       <div>
         <div className="contact-details">
@@ -54,18 +51,15 @@ function Contact(props) {
         </div>
       </div>
     );
-    let connects = info.connects;
-
-    connect = connects.map((con, i) => {
-      return (
-        <div className="connect-social" key={i}>
-          <a href={con.url} target="_blank" rel="noreferrer">
-            <i className={`${con.image} fa-2x`} />
-          </a>
-        </div>
-      );
-    });
-  }
+  let connect = info.connects.map((con, i) => {
+    return (
+      <div className="connect-social" key={i}>
+        <a href={con.url} target="_blank" rel="noreferrer">
+          <i className={`${con.image} fa-2x`} />
+        </a>
+      </div>
+    );
+  });
 
   const modalHandler = (close) => {
     setModal(close);
@@ -78,74 +72,71 @@ function Contact(props) {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    /*
-        if (!Object.keys(inputs).includes("name") || inputs.name === "") {
-          setErrors({
-            name: "We need your name for documentation purposes.",
-          });
-        } else if (
-          !Object.keys(inputs).includes("email") ||
-          inputs.email === ""
-        ) {
-          setErrors({
-            email: "We need your email for our response to reach you.",
-          });
-        } else if (
-          !Object.keys(inputs).includes("phone") ||
-          inputs.phone === ""
-        ) {
-          setErrors({
-            phone: "We need  your phone number for faster communication.",
-          });
-        } else if (isNaN(inputs.phone)) {
-          setErrors({
-            phone: "Phone number can only be numbers.",
-          });
-        } else if (
-          !Object.keys(inputs).includes("subject") ||
-          inputs.subject === ""
-        ) {
-          setErrors({
-            subject: "You need to enter a Subject for your message.",
-          });
-        } else if (
-          !Object.keys(inputs).includes("message") ||
-          inputs.message === ""
-        ) {
-          setErrors({
-            message: "What is a Message without content?",
-          });
-        } else {
-          setLoading(true);
-          setErrors({});
-          const message = {
-            name: inputs.name.toLowerCase(),
-            email: inputs.email.toLowerCase(),
-            phone: inputs.phone,
-            subject: inputs.subject,
-            message: inputs.message,
-            send: "message",
-          };
 
-          try {
-            let response = await axios.post(
-              API_PATH,
-              {
-                message,
-              },
-              { headers: { "content-type": "application/json" } }
-            );
-            if (response.data === 1) {
-              setInputs({});
-              setLoading(false);
-              setSender("success");
-              setModal(true);
-            }
-          } catch (error) {
-            setSender("error");
-            setModal(true);
-          }
-        }*/
+    if (!Object.keys(inputs).includes("name") || inputs.name === "") {
+      setErrors({
+        name: "We need your name for documentation purposes.",
+      });
+    } else if (!Object.keys(inputs).includes("email") || inputs.email === "") {
+      setErrors({
+        email: "We need your email for our response to reach you.",
+      });
+    } else if (!Object.keys(inputs).includes("phone") || inputs.phone === "") {
+      setErrors({
+        phone: "We need  your phone number for faster communication.",
+      });
+    } else if (isNaN(inputs.phone)) {
+      setErrors({
+        phone: "Phone number can only be numbers.",
+      });
+    } else if (
+      !Object.keys(inputs).includes("subject") ||
+      inputs.subject === ""
+    ) {
+      setErrors({
+        subject: "You need to enter a Subject for your message.",
+      });
+    } else if (
+      !Object.keys(inputs).includes("message") ||
+      inputs.message === ""
+    ) {
+      setErrors({
+        message: "What is a Message without content?",
+      });
+    } else {
+      setLoading(true);
+      setErrors({});
+      const message = {
+        name: inputs.name.toLowerCase(),
+        email: inputs.email.toLowerCase(),
+        phone: inputs.phone,
+        subject: inputs.subject,
+        message: inputs.message,
+        send: "message",
+      };
+      console.log(message);
+
+      try {
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(message),
+        };
+        const response = await fetch(API_PATH, requestOptions);
+        const data = await response.json();
+
+        console.log(data);
+        if (response.data === 1) {
+          setInputs({});
+          setLoading(false);
+          setSender("success");
+          setModal(true);
+        }
+      } catch (error) {
+        setSender("error");
+        setModal(true);
+      }
+    }
   };
 
   return (
@@ -227,10 +218,7 @@ function Contact(props) {
                       />
                     </div>
                   </div>
-                  <button
-                    type="submit"
-                    className="btn submit-btn btn-block btn-success"
-                  >
+                  <button type="submit" className="btn regular-btn">
                     Send Message
                     {!loading && (
                       <i className="fa-solid fa-circle-notch fa-spin" />

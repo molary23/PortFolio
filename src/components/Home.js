@@ -3,7 +3,7 @@ import { InfoContext } from "../services/info.services";
 
 function Home(props) {
   const { homeRef } = props;
-  const { info, isLoading } = useContext(InfoContext);
+  const { info } = useContext(InfoContext);
   return (
     <div className="home-page" ref={homeRef}>
       <div className="container">
@@ -14,16 +14,14 @@ function Home(props) {
                 hassan a. adeola
               </h1>
               <div className="info-role">
-                {!isLoading && (
-                  <h2 className="info-job-role">{info.about.role}</h2>
-                )}
+                <h2 className="info-job-role">{info.about.role}</h2>
               </div>
 
               <div className="intro-buttons">
-                <button className="btn btn-primary">
+                <button className="btn regular-btn">
                   <span>Hire Me</span>
                 </button>
-                <button className="btn btn-outline-primary">
+                <button className="btn outline-btn">
                   <span>
                     View Resume <i className="fa-solid fa-chevron-right" />
                   </span>
@@ -33,13 +31,11 @@ function Home(props) {
           </div>
           <div className="col-lg-5">
             <div className="intro-image">
-              {!isLoading && (
-                <img
-                  src={info.about.image}
-                  alt="Hassan Azeez Adeola"
-                  className="my-image"
-                />
-              )}
+              <img
+                src={info.about.image}
+                alt="Hassan Azeez Adeola"
+                className="my-image"
+              />
             </div>
           </div>
         </div>
