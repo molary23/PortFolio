@@ -35,27 +35,27 @@
     {
       "name": "facebook",
       "url": "https://www.facebook.com/molary",
-      "image": "https://hassanadeola.com/images/facebook.svg"
+      "image": "fa-brands fa-facebook-square"
     },
     {
       "name": "twitter",
       "url": "https://www.twitter.com/molary",
-      "image": "https://hassanadeola.com/images/twitter.svg"
+      "image": "fa-brands fa-twitter-square"
     },
     {
       "name": "instagram",
       "url": "https://www.instagram.com/iam_molary",
-      "image": "https://hassanadeola.com/images/instagram.svg"
+      "image": "fa-brands fa-instagram-square"
     },
     {
       "name": "linkedin",
       "url": "https://www.linkedin.com/in/molary",
-      "image": "https://hassanadeola.com/images/linkedin.svg"
+      "image": "fa-brands fa-linkedin"
     },
     {
       "name": "github",
       "url": "https://www.github.com/molary23",
-      "image": "https://hassanadeola.com/images/github.svg"
+      "image": "fa-brands fa-github-square"
     }
   ],
   "skills": [
@@ -183,35 +183,43 @@
   "services": [
     {
       "name": "full stack web development",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-cubes-stacked"
     },
     {
       "name": "ecommerce website",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-store"
     },
     {
       "name": "content management system",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-table-list"
     },
     {
       "name": "custom web applications",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-laptop-code"
     },
     {
       "name": "SEO optimisation",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-magnifying-glass"
     },
     {
       "name": "web support and maintenance",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-screwdriver-wrench"
     },
     {
       "name": "mobile application development",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-mobile-screen"
     },
     {
       "name": "UI/UX",
-      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit."
+      "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
+      "image": "fa-solid fa-users-rectangle"
     }
   ]
 }

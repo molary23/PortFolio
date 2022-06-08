@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { InfoContext } from "../services/info.services";
-import { AiOutlineDoubleRight } from "react-icons/ai";
 
 function Home(props) {
   const { homeRef } = props;
@@ -22,13 +21,11 @@ function Home(props) {
 
               <div className="intro-buttons">
                 <button className="btn btn-primary">
-                  <span>
-                    Read More <AiOutlineDoubleRight />
-                  </span>
+                  <span>Hire Me</span>
                 </button>
                 <button className="btn btn-outline-primary">
                   <span>
-                    Download Resume <AiOutlineDoubleRight />
+                    View Resume <i className="fa-solid fa-chevron-right" />
                   </span>
                 </button>
               </div>

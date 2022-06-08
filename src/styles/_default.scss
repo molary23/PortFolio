@@ -103,6 +103,10 @@ button {
   height: 40px;
 }
 
+a {
+  text-decoration: none;
+}
+
 textarea#contact-form-message {
   height: 120px;
 }
@@ -116,31 +120,6 @@ textarea#contact-form-message {
   text-align: center;
 }
 
-.loader {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-.icon-spin {
-  width: 30px;
-  height: 30px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 .my-card {
   box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
   border-radius: nth($spacing, 2) / 2;
@@ -151,4 +130,7 @@ textarea#contact-form-message {
     -webkit-transform: scale(1.06);
     transform: scale(1.06);
   }
+}
+.loader {
+  text-align: center;
 }

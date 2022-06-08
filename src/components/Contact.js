@@ -6,12 +6,6 @@ import TextAreaField from "../layout/TextAreaField";
 import TextInputField from "../layout/TextInputField";
 import Modal from "../layout/Modal";
 
-import { BiMapPin } from "react-icons/bi";
-import { GoMailRead } from "react-icons/go";
-import { BsPhone } from "react-icons/bs";
-import { FiLoader } from "react-icons/fi";
-import { SiSkypeforbusiness } from "react-icons/si";
-
 function Contact(props) {
   const { contactRef } = props,
     [inputs, setInputs] = useState({}),
@@ -30,7 +24,7 @@ function Contact(props) {
       <div>
         <div className="contact-details">
           <div className="contact-icon">
-            <GoMailRead />
+            <i className="fa-solid fa-envelope-open-text" />
           </div>
           <div className="contact-info">
             <a href={`mailto:${contacts.mail}`}>{contacts.mail}</a>
@@ -38,7 +32,7 @@ function Contact(props) {
         </div>
         <div className="contact-details">
           <div className="contact-icon">
-            <BsPhone />
+            <i className="fa-solid fa-phone" />
           </div>
           <div className="contact-info">
             <a href={`tel:${contacts.phone}`}>{contacts.phone}</a>
@@ -46,7 +40,7 @@ function Contact(props) {
         </div>
         <div className="contact-details">
           <div className="contact-icon">
-            <SiSkypeforbusiness />
+            <i className="fa-brands fa-skype" />
           </div>
           <div className="contact-info">
             <a href={`skype:${contacts.skype}?chat`}>{contacts.skype}</a>
@@ -54,7 +48,7 @@ function Contact(props) {
         </div>
         <div className="contact-details">
           <div className="contact-icon">
-            <BiMapPin />
+            <i className="fa-solid fa-map-location-dot" />
           </div>
           <div className="contact-info contact-location">{`${contacts.location} - open to ${contacts.office}`}</div>
         </div>
@@ -66,7 +60,7 @@ function Contact(props) {
       return (
         <div className="connect-social" key={i}>
           <a href={con.url} target="_blank" rel="noreferrer">
-            <img src={con.image} alt={"Hassan Adeola's " + con.name} />
+            <i className={`${con.image} fa-2x`} />
           </a>
         </div>
       );
@@ -164,13 +158,13 @@ function Contact(props) {
 
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-12">
+            <div className="col-lg-5 col-12">
               <div className="contact-connect-info">
                 <div className="contact-info-card">{contact}</div>
                 <div className="connect-info-card">{connect}</div>
               </div>
             </div>
-            <div className="col-lg-6 col-12">
+            <div className="col-lg-7 col-12">
               <form className="contact-form" onSubmit={submitHandler}>
                 <div className="container">
                   <div className="row">
@@ -238,7 +232,9 @@ function Contact(props) {
                     className="btn submit-btn btn-block btn-success"
                   >
                     Send Message
-                    {!loading && <FiLoader />}
+                    {!loading && (
+                      <i className="fa-solid fa-circle-notch fa-spin" />
+                    )}
                   </button>
                 </div>
               </form>

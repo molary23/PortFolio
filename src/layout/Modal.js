@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import { AiOutlineClose } from "react-icons/ai";
-
 function Modal(props) {
   const { modal, onClick, sender } = props,
     [open, setOpen] = useState(modal);
@@ -35,7 +33,7 @@ function Modal(props) {
             <div className="modal-header">
               <h4 className="modal-title">{title}</h4>
               <button type="button" className="btn-close" onClick={closeModal}>
-                <AiOutlineClose />
+                <i className="fa-solid fa-xmark" />
               </button>
             </div>
 

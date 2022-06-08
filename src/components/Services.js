@@ -14,7 +14,7 @@ function Services() {
         <div className="col-lg-4 col-12" key={i}>
           <div className="service-card my-card">
             <div className="service-image">
-              <img src={service.image} alt={service.name} />
+              <i className={`${service.image} fa-2x`} />
             </div>
             <div className="service-name">
               <h3>{service.name}</h3>

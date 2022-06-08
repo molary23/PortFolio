@@ -31,6 +31,7 @@ function Skills() {
       <div className="my-skills">
         <div className="section-heading">
           <h1>Skills</h1>
+          <h2>tech stack i use to get the job done</h2>
         </div>
 
         <div className="container">
