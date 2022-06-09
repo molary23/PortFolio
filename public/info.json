@@ -136,6 +136,7 @@
     }
   ],
   "about": {
+    "name": "hassan  a. adeola",
     "role": "full stack web developer",
     "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
     "image": "https://hassanadeola.com/images/mo.png"
@@ -146,7 +147,7 @@
       "name": "MIC Earn Business",
       "website": "https://www.micearnbusiness.org",
       "type": "front end and back end website",
-      "image": "",
+      "image": "https://hassanadeola.com/images/mic.jpg",
       "stack": [
         "HTML",
         "SASS",
@@ -158,31 +159,36 @@
         "PHP",
         "MySQL"
       ],
-      "category": ["web"]
+      "category": "web"
     },
     {
       "name": "Gallant Store NG",
       "website": "https://www.gallantstoreng.com",
       "type": "Ecommerce",
-      "image": "",
+      "image": "https://hassanadeola.com/images/gallantstoreng.jpg",
       "stack": ["HTML", "CSS", "WordPress", "PHP"],
-      "category": ["web"]
+      "category": "web"
     },
     {
       "name": "BAH Engineering Consultant",
       "website": "https://www.bahengineeringconsultant.com",
       "type": "Multi pages web application",
-      "image": "",
+      "image": "https://hassanadeola.com/images/bah.jpg",
       "stack": ["HTML", "CSS", "JQuery", "PHP"],
-      "category": ["mobile", "www.androidurl.com", "www.iosurl.com"]
+      "category": "mobile",
+      "store": [
+        { "play": "https://www.androidurl.com" },
+        { "app": "https://www.iosurl.com" }
+      ]
     },
     {
       "name": "Lucipost",
       "website": "https://www.lucipost.com",
       "type": "Entertainment Blog",
-      "image": "",
+      "image": "https://hassanadeola.com/images/lucipost.jpg",
       "stack": ["HTML", "CSS", "WordPress", "PHP", "Vanilla JS", "MySQL"],
-      "category": ["mobile", "www.androidurl.com"]
+      "category": "mobile",
+      "store": [{ "play": "https://www.androidurl.com" }]
     }
   ],
   "services": [

@@ -11,7 +11,7 @@ function Home(props) {
           <div className="col-lg-7">
             <div className="intro-details">
               <h1 className="intro-name" translate="no">
-                hassan a. adeola
+                {info.about.name}
               </h1>
               <div className="info-role">
                 <h2 className="info-job-role">{info.about.role}</h2>

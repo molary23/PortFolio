@@ -45,12 +45,43 @@ function Projects(props) {
               <label htmlFor="#projectCategory">Category:</label>
             </div>
             <div className="project-category">
-              <p id="projectCategory">{project.category[0]}</p>
+              <p id="projectCategory">{project.category}</p>
             </div>
           </div>
-          <div className="project-image">
-            <img src={project.image} alt={project.name} />
-            <p>{project.website}</p>
+
+          <div className="project-image-container">
+            <img
+              src={project.image}
+              alt={project.name}
+              className="project-image"
+            />
+            <div className="overlay">
+              <div className="text">
+                {project.category.toLowerCase() === "web" && (
+                  <a href={project.website} target="_blank" rel="noreferrer">
+                    View in Browser
+                  </a>
+                )}
+                {project.category.toLowerCase() === "mobile" &&
+                  project.store.map((store, i) => {
+                    return (
+                      <div className="project-store-link" key={i}>
+                        <a
+                          href={Object.values(store)}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          View on{" "}
+                          <span className="store-name">
+                            {Object.keys(store)}
+                          </span>{" "}
+                          store
+                        </a>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
           </div>
         </div>
       </div>

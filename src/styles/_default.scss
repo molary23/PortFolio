@@ -95,6 +95,7 @@ html {
 }
 
 section {
+  min-height: 700px;
   height: fit-content;
 }
 
@@ -136,10 +137,6 @@ textarea#contact-form-message {
     -webkit-transform: scale(1.06);
     transform: scale(1.06);
   }
-}
-.loader {
-  text-align: center;
-  margin-top: nth($box, 2) - 100px;
 }
 
 .regular-btn {
