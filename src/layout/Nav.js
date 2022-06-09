@@ -1,10 +1,119 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 
 function Nav(props) {
   const { homeRef, aboutRef, skillsRef, projectsRef, servicesRef, contactRef } =
       props,
     [display, setDisplay] = useState(false),
-    [isActive, setIsActive] = useState(1);
+    [isActive, setIsActive] = useState(1),
+    [focus, setFocus] = useState(false);
+
+  const addFocus = () => {
+    let winScroll = window.scrollY;
+    if (winScroll > 100) {
+      setFocus(true);
+    } else {
+      setFocus(false);
+    }
+  };
+
+  const scrollToSection = (where, isActive) => {
+    window.scrollTo({
+      top: where.offsetTop,
+      behavior: "smooth",
+    });
+    setIsActive((isActive) => isActive);
+    setDisplay(!display);
+  };
+
+  const moveTo = (e) => {
+    let linkid = e.target.id;
+    switch (linkid) {
+      case "homelink": {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        setIsActive((isActive) => 0);
+        break;
+      }
+      case "aboutlink": {
+        scrollToSection(aboutRef.current, 1);
+        break;
+      }
+      case "skilllink": {
+        scrollToSection(skillsRef.current, 4);
+        break;
+      }
+      case "projectlink": {
+        scrollToSection(projectsRef.current, 3);
+        break;
+      }
+      case "servicelink": {
+        scrollToSection(servicesRef.current, 2);
+        break;
+      }
+      case "contactlink": {
+        scrollToSection(contactRef.current, 5);
+        break;
+      }
+      default:
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        setIsActive((isActive) => 0);
+        break;
+    }
+  };
+
+  const changeFocus = () => {
+    const about = aboutRef.current,
+      home = homeRef.current,
+      service = servicesRef.current,
+      contact = contactRef.current,
+      skills = skillsRef.current,
+      projects = projectsRef.current;
+
+    let winScroll = window.scrollY + 100;
+    if (winScroll >= 0 && winScroll < home.clientHeight) {
+      setIsActive((isActive) => 0);
+    } else if (
+      winScroll >= about.offsetTop &&
+      winScroll < about.offsetTop + about.clientHeight
+    ) {
+      setIsActive((isActive) => 1);
+    } else if (
+      winScroll >= skills.offsetTop &&
+      winScroll < skills.offsetTop + skills.clientHeight
+    ) {
+      setIsActive((isActive) => 2);
+    } else if (
+      winScroll >= projects.offsetTop &&
+      winScroll < projects.offsetTop + projects.clientHeight
+    ) {
+      setIsActive((isActive) => 3);
+    } else if (
+      winScroll >= service.offsetTop &&
+      winScroll < service.offsetTop + service.clientHeight
+    ) {
+      setIsActive((isActive) => 4);
+    } else if (
+      winScroll >= contact.offsetTop &&
+      winScroll < contact.offsetTop + contact.clientHeight
+    ) {
+      setIsActive((isActive) => 5);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener("scroll", changeFocus, { passive: true });
+    window.addEventListener("scroll", addFocus, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", changeFocus);
+      window.removeEventListener("scroll", addFocus);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <header>
@@ -37,7 +146,8 @@ function Nav(props) {
                   className={`${
                     isActive === 0 ? "active-nav" : ""
                   } nav-link about-link`}
-                  id="aboutlink"
+                  id="homelink"
+                  onClick={(e) => moveTo(e)}
                 >
                   Home
                 </span>
@@ -46,8 +156,9 @@ function Nav(props) {
                 <span
                   className={`${
                     isActive === 1 ? "active-nav" : ""
-                  } nav-link service-link`}
-                  id="servicelink"
+                  } nav-link about-link`}
+                  id="aboutlink"
+                  onClick={(e) => moveTo(e)}
                 >
                   About
                 </span>
@@ -57,8 +168,9 @@ function Nav(props) {
                 <span
                   className={`${
                     isActive === 2 ? "active-nav" : ""
-                  } nav-link contact-link`}
-                  id="contactlink"
+                  } nav-link skill-link`}
+                  id="skilllink"
+                  onClick={(e) => moveTo(e)}
                 >
                   Skills
                 </span>
@@ -70,6 +182,7 @@ function Nav(props) {
                     isActive === 3 ? "active-nav" : ""
                   } nav-link project-link`}
                   id="projectlink"
+                  onClick={(e) => moveTo(e)}
                 >
                   Projects
                 </span>
@@ -81,6 +194,7 @@ function Nav(props) {
                     isActive === 4 ? "active-nav" : ""
                   } nav-link service-link`}
                   id="servicelink"
+                  onClick={(e) => moveTo(e)}
                 >
                   Services
                 </span>
@@ -92,6 +206,7 @@ function Nav(props) {
                     isActive === 5 ? "active-nav" : ""
                   } nav-link contact-link`}
                   id="contactlink"
+                  onClick={(e) => moveTo(e)}
                 >
                   Contact
                 </span>

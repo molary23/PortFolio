@@ -203,6 +203,15 @@ textarea#contact-form-message {
   background: blue;
 }
 
+.top-nav .active-nav:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background: red;
+}
+
 .home-page {
   background: rgba(151, 198, 252, 0.2);
   height: -webkit-fit-content;

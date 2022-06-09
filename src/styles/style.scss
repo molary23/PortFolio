@@ -27,6 +27,16 @@
       background: blue;
     }
   }
+  .active-nav {
+    &:after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 100%;
+      background: red;
+    }
+  }
 }
 
 .home-page {
