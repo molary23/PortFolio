@@ -2,8 +2,16 @@ import React, { useContext } from "react";
 import { InfoContext } from "../services/info.services";
 
 function Home(props) {
-  const { homeRef } = props;
-  const { info } = useContext(InfoContext);
+  const { homeRef, contactRef } = props;
+  const { info } = useContext(InfoContext),
+    contact = contactRef.current;
+
+  const toContact = () => {
+    window.scrollTo({
+      top: contact.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="home-page" ref={homeRef}>
       <div className="container">
@@ -18,7 +26,7 @@ function Home(props) {
               </div>
 
               <div className="intro-buttons">
-                <button className="btn regular-btn">
+                <button className="btn regular-btn" onClick={toContact}>
                   <span>Hire Me</span>
                 </button>
                 <button className="btn outline-btn">
