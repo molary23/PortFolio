@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { InfoContext } from "../services/info.services";
 
 function Projects(props) {

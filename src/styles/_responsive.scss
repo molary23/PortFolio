@@ -1,0 +1,71 @@
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .skill-card {
+    width: nth($box, 1) - 50px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .home-page {
+    .intro-details {
+      margin-top: nth($spacing, 5);
+      padding-left: nth($spacing, 3);
+      padding-bottom: nth($spacing, 3);
+      .intro-name {
+        font-size: 2.5rem;
+      }
+      .info-job-role {
+        font-size: 1rem;
+      }
+      .intro-buttons button {
+        width: fit-content;
+        i {
+          margin-left: nth($spacing, 2);
+        }
+      }
+    }
+  }
+  .skills {
+    .skill-card {
+      width: nth($box, 1) - 70px;
+      height: nth($box, 1) - 70px;
+      padding: nth($spacing, 3) nth($spacing, 2);
+    }
+    .skill-name h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .projects {
+    .project-card {
+      width: fit-content;
+    }
+  }
+  .services {
+    .service-card {
+      width: fit-content;
+    }
+  }
+  .footer-title {
+    font-size: 0.9rem;
+  }
+  .navbar-collapse {
+    background: rgba(nth($color, 2), 1);
+    padding: 0px nth($spacing, 2);
+    &:active {
+      border: none;
+    }
+  }
+  .contact {
+    .contact-connect-info {
+      padding-left: nth($spacing, 3);
+    }
+  }
+  .about {
+    .about-image {
+      margin-bottom: nth($spacing, 4);
+    }
+  }
+}

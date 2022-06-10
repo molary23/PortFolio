@@ -22,6 +22,7 @@ function Loader() {
 
   useEffect(() => {
     randomiseArray(jobs);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="loader">

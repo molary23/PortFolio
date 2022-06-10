@@ -128,12 +128,36 @@ textarea#contact-form-message {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.section-heading h1:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: -10px;
+  left: calc(50% - 60px);
+}
+
+.section-heading h1:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #18d26e;
+  bottom: -11px;
+  left: calc(50% - 20px);
 }
 
 .section-heading h2 {
   text-transform: capitalize;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 100;
+  margin-top: 50px;
 }
 
 .my-card {
@@ -198,7 +222,7 @@ textarea#contact-form-message {
 
 .top-nav .nav-link:hover:after {
   width: 100%;
-  background: rgba(0, 180, 216, 0.8);
+  background: #05f2cb;
 }
 
 .top-nav .active-nav:after {
@@ -207,7 +231,11 @@ textarea#contact-form-message {
   margin: auto;
   height: 3px;
   width: 100%;
-  background: #00b4d8;
+  background: #05f2cb;
+}
+
+.top-nav button.navbar-toggler {
+  border: none;
 }
 
 .change-nav-bg {
@@ -254,7 +282,7 @@ textarea#contact-form-message {
   color: #5ea1ed;
   font-family: monospace;
   overflow: hidden;
-  border-right: 0.08em solid rgba(0, 180, 216, 0.8);
+  border-right: 0.08em solid rgba(5, 242, 203, 0.8);
   white-space: nowrap;
   margin: 10px auto;
   letter-spacing: 0.15em;
@@ -287,7 +315,7 @@ textarea#contact-form-message {
     border-color: transparent;
   }
   50% {
-    border-color: rgba(0, 180, 216, 0.8);
+    border-color: rgba(5, 242, 203, 0.8);
   }
 }
 
@@ -297,7 +325,7 @@ textarea#contact-form-message {
     border-color: transparent;
   }
   50% {
-    border-color: rgba(0, 180, 216, 0.8);
+    border-color: rgba(5, 242, 203, 0.8);
   }
 }
 
@@ -338,9 +366,12 @@ textarea#contact-form-message {
 }
 
 .about .about-me {
-  width: 70%;
-  text-align: center;
+  text-align: justify;
   margin: 0 auto;
+}
+
+.about .about-info {
+  margin-bottom: 20px;
 }
 
 /* Skills */
@@ -447,7 +478,7 @@ textarea#contact-form-message {
 }
 
 .contact .contact-details .contact-location {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .contact .connect-info-card {
@@ -478,6 +509,7 @@ textarea#contact-form-message {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid white;
 }
 
 .contact .btn i {
@@ -623,6 +655,7 @@ textarea#contact-form-message {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
+  margin-bottom: 20px;
 }
 
 .projects .project-card .project-details .project-stack {
@@ -718,5 +751,67 @@ textarea#contact-form-message {
 
 .loader .loading-title {
   font-family: monospace;
+}
+
+@media only screen and (max-width: 767px) {
+  .skill-card {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .home-page .intro-details {
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .home-page .intro-details .intro-name {
+    font-size: 2.5rem;
+  }
+  .home-page .intro-details .info-job-role {
+    font-size: 1rem;
+  }
+  .home-page .intro-details .intro-buttons button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home-page .intro-details .intro-buttons button i {
+    margin-left: 10px;
+  }
+  .skills .skill-card {
+    width: 130px;
+    height: 130px;
+    padding: 20px 10px;
+  }
+  .skills .skill-name h3 {
+    font-size: 1.25rem;
+  }
+  .projects .project-card {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .services .service-card {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .footer-title {
+    font-size: 0.9rem;
+  }
+  .navbar-collapse {
+    background: #97c6fc;
+    padding: 0px 10px;
+  }
+  .navbar-collapse:active {
+    border: none;
+  }
+  .contact .contact-connect-info {
+    padding-left: 20px;
+  }
+  .about .about-image {
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

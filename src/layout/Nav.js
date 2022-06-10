@@ -29,10 +29,7 @@ function Nav(props) {
     let linkid = e.target.id;
     switch (linkid) {
       case "homelink": {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        scrollToSection(homeRef.current, 0);
         setIsActive((isActive) => 0);
         break;
       }
@@ -147,7 +144,7 @@ function Nav(props) {
                 <span
                   className={`${
                     isActive === 0 ? "active-nav" : ""
-                  } nav-link about-link`}
+                  } nav-link home-link`}
                   id="homelink"
                   onClick={(e) => moveTo(e)}
                 >

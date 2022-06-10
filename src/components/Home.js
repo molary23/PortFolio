@@ -37,7 +37,7 @@ function Home(props) {
               </div>
             </div>
           </div>
-          <div className="col-lg-5">
+          <div className="col-lg-5 d-none d-sm-block">
             <div className="intro-image">
               <img
                 src={info.about.image}

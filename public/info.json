@@ -138,15 +138,20 @@
   "about": {
     "name": "hassan  a. adeola",
     "role": "full stack web developer",
-    "content": "Veniam aute ea proident nisi Lorem deserunt ad dolore deserunt. Sint pariatur ipsum Lorem mollit anim ea proident velit eu dolor dolore aliqua. Reprehenderit voluptate eiusmod nostrud aute. Adipisicing eiusmod deserunt magna proident exercitation ipsum ipsum velit.",
-    "image": "https://hassanadeola.com/images/mo.png"
+    "content": [
+      "I'm a professional Full Stack Web Developer with expertise in designing and developing websites. I specialise in creating beautiful, functional professional websites that are semantic and SEO-friendly by adopting best practices and the most recent W3C web standards.",
+      "Great design, in my opinion, is in the details, and design must also support functionality. I have the skills and knowledge essential to make your project a success, having worked as a professional web developer for over 7 years. From discussion and collaboration to project completion, I appreciate every step of the design process.",
+      "I consider myself a 'lifelong learner' who is always willing to acquire new skills and expand my professional horizons. I can also apply my previous abilities and knowledge to solve difficult situations. My thirst for knowledge and commitment to putting knowledge into practice has aided my recent success at the School of Disciples, where I am the Head of the Information and Communication Technology Department."
+    ],
+    "image": "https://hassanadeola.com/images/mo.png",
+    "photo": "https://hassanadeola.com/images/mo.png"
   },
 
   "projects": [
     {
       "name": "MIC Earn Business",
       "website": "https://www.micearnbusiness.org",
-      "type": "front end and back end website",
+      "type": "full stack website with both frontend and backend",
       "image": "https://hassanadeola.com/images/mic.jpg",
       "stack": [
         "HTML",
@@ -172,7 +177,7 @@
     {
       "name": "BAH Engineering Consultant",
       "website": "https://www.bahengineeringconsultant.com",
-      "type": "Multi pages web application",
+      "type": "Multi pages front end web application",
       "image": "https://hassanadeola.com/images/bah.jpg",
       "stack": ["HTML", "CSS", "JQuery", "PHP"],
       "category": "mobile",

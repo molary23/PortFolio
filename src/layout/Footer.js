@@ -5,8 +5,8 @@ function Footer() {
     <div>
       <nav className="navbar navbar-expand-sm bg-light navbar-dark footer-nav justify-content-center">
         <p className="footer-title">
-          All rights reserved © <span translate="no">hassan azeez adeola</span>{" "}
-          {new Date().getFullYear()}
+          All rights reserved | <span translate="no">hassan azeez adeola</span>{" "}
+          © {new Date().getFullYear()}
         </p>
       </nav>
     </div>

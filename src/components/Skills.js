@@ -30,7 +30,7 @@ function Skills(props) {
         </div>
 
         <div className="container">
-          <div className="row">{skills}</div>
+          <div className="row skill-row">{skills}</div>
         </div>
       </div>
     </div>

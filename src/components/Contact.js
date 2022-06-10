@@ -148,7 +148,7 @@ function Contact(props) {
         </div>
 
         <div className="container">
-          <div className="row">
+          <div className="row flex-column-reverse flex-lg-row">
             <div className="col-lg-5 col-12">
               <div className="contact-connect-info">
                 <div className="contact-info-card">{contact}</div>

@@ -16,7 +16,7 @@
     }
     &:hover:after {
       width: 100%;
-      background: rgba(nth($color, 4), 0.8);
+      background: rgba(nth($color, 8), 1);
     }
   }
   .active-nav {
@@ -26,8 +26,12 @@
       margin: auto;
       height: 3px;
       width: 100%;
-      background: rgba(nth($color, 4), 1);
+      background: rgba(nth($color, 8), 1);
     }
+  }
+
+  button.navbar-toggler {
+    border: none;
   }
 }
 .change-nav-bg {
@@ -39,7 +43,6 @@
 
 .home-page {
   background: rgba(nth($color, 2), 0.2);
-
   height: fit-content;
   min-height: nth($box, 2);
   padding: nth($spacing, 4) nth($spacing, 1) 0px;
@@ -66,7 +69,7 @@
       color: #5ea1ed;
       font-family: monospace;
       overflow: hidden;
-      border-right: 0.08em solid rgba(nth($color, 4), 0.8);
+      border-right: 0.08em solid rgba(nth($color, 8), 0.8);
       white-space: nowrap;
       margin: nth($spacing, 2) auto;
       letter-spacing: 0.15em;
@@ -91,7 +94,7 @@
         border-color: transparent;
       }
       50% {
-        border-color: rgba(nth($color, 4), 0.8);
+        border-color: rgba(nth($color, 8), 0.8);
       }
     }
   }
@@ -125,9 +128,11 @@
   padding: nth($spacing, 5) 0px;
 
   .about-me {
-    width: 70%;
-    text-align: center;
+    text-align: justify;
     margin: 0 auto;
+  }
+  .about-info {
+    margin-bottom: nth($spacing, 3);
   }
 }
 
@@ -216,7 +221,7 @@
       }
     }
     .contact-location {
-      text-transform: uppercase;
+      text-transform: capitalize;
     }
   }
 
@@ -236,6 +241,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid rgba(nth($color, 5), 1);
+
     i {
       margin-left: nth($spacing, 2) / 2;
     }
@@ -367,6 +374,7 @@
     .project-details {
       display: flex;
       height: 60px;
+      margin-bottom: nth($spacing, 3);
       .project-stack {
         margin-left: nth($spacing, 2);
       }
