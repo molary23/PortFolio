@@ -1,17 +1,9 @@
 @import "default.scss";
 
 .top-nav {
-  background: yellow;
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 50%;
-    background: rgba(0, 0, 0, 0.8);
-  }
+  background: transparent;
+  padding-right: nth($spacing, 2);
+  transition: background-color 500ms ease-in;
   .nav-link {
     &:after {
       content: "";
@@ -24,7 +16,7 @@
     }
     &:hover:after {
       width: 100%;
-      background: blue;
+      background: rgba(nth($color, 4), 0.8);
     }
   }
   .active-nav {
@@ -34,8 +26,14 @@
       margin: auto;
       height: 3px;
       width: 100%;
-      background: red;
+      background: rgba(nth($color, 4), 1);
     }
+  }
+}
+.change-nav-bg {
+  background: rgba(nth($color, 2), 1);
+  .nav-link {
+    color: nth($color, 5) !important;
   }
 }
 
@@ -54,6 +52,7 @@
       font-size: 4rem;
       letter-spacing: -3.5px;
       font-weight: 600;
+      color: rgba(nth($color, 7), 0.8);
     }
 
     .info-role {
@@ -67,7 +66,7 @@
       color: #5ea1ed;
       font-family: monospace;
       overflow: hidden;
-      border-right: 0.08em solid rgb(10, 242, 203);
+      border-right: 0.08em solid rgba(nth($color, 4), 0.8);
       white-space: nowrap;
       margin: nth($spacing, 2) auto;
       letter-spacing: 0.15em;
@@ -92,7 +91,7 @@
         border-color: transparent;
       }
       50% {
-        border-color: rgb(10, 242, 203);
+        border-color: rgba(nth($color, 4), 0.8);
       }
     }
   }
@@ -122,7 +121,7 @@
 /* About Me */
 .about {
   min-height: nth($box, 2);
-  background: #fff;
+  background: nth($color, 5);
   padding: nth($spacing, 5) 0px;
 
   .about-me {
@@ -135,7 +134,7 @@
 /* Skills */
 .skills {
   min-height: nth($box, 2);
-  background: red;
+  background: rgba(nth($color, 2), 0.7);
   padding: nth($spacing, 5) 0px;
 
   .my-skills {
@@ -143,12 +142,12 @@
   }
 
   .skill-card {
-    border: 0.5px solid #fff;
+    border: 0.5px solid nth($color, 5);
     height: nth($box, 1);
     width: nth($box, 1);
-    color: yellow;
-    padding: nth($spacing, 2);
-
+    color: rgba(nth($color, 1), 1);
+    padding: nth($spacing, 3);
+    background: nth($color, 5);
     .skill-image {
       height: 50%;
 
@@ -156,6 +155,7 @@
         width: 40%;
         height: auto;
         margin: 0px auto;
+        filter: opacity(0.8);
       }
     }
     .skill-name {
@@ -163,8 +163,13 @@
     }
 
     &:hover {
-      background: #fff;
-      color: red;
+      background: rgba(nth($color, 1), 1);
+      color: nth($color, 5);
+      .skill-image {
+        img {
+          filter: invert(1);
+        }
+      }
     }
   }
 }
@@ -174,7 +179,7 @@
   min-height: nth($box, 2);
   height: fit-content;
   padding: nth($spacing, 4) 0px;
-  background: blue;
+  background: rgba(nth($color, 2), 0.6);
 
   .contact-connect-info {
     margin-top: nth($spacing, 4);
@@ -189,7 +194,8 @@
     .contact-icon {
       border-radius: 40px;
       padding: nth($spacing, 2);
-      background: yellow;
+      background: rgba(nth($color, 2), 0.6);
+      color: rgba(nth($color, 1), 0.8);
       width: 40px;
       height: 40px;
       text-align: center;
@@ -199,8 +205,11 @@
     }
     .contact-info {
       margin-left: nth($spacing, 3);
-
+      color: nth($color, 7);
+      font-weight: 500;
       a {
+        color: nth($color, 7);
+        font-weight: 500;
         &:hover {
           text-decoration: underline;
         }
@@ -219,7 +228,7 @@
 
     i {
       margin-right: 15px;
-      color: red;
+      color: rgba(nth($color, 1), 0.7);
     }
   }
 
@@ -237,13 +246,14 @@
   min-height: nth($box, 4);
   height: fit-content;
   padding: nth($spacing, 4) 0px;
-  background: green;
+  background: rgba(nth($color, 2), 0.4);
 
   .service-card {
     min-height: nth($box, 2);
     width: 100%;
     padding: nth($spacing, 4) nth($spacing, 3);
-    background: #fff;
+    background: nth($color, 5);
+    color: rgba(nth($color, 7), 0.8);
   }
 
   .service-image,
@@ -268,11 +278,11 @@
     i {
       border-radius: 40px;
       padding: nth($spacing, 3) 0px;
-      background: rgba(rgb(125, 186, 240), 0.3);
       width: 80px;
       height: 80px;
       font-size: 40px;
-      color: rgba(rgb(125, 186, 240), 1);
+      background: rgba(nth($color, 2), 0.6);
+      color: rgba(nth($color, 1), 0.8);
     }
   }
 }
@@ -282,13 +292,13 @@
   min-height: nth($box, 4);
   height: fit-content;
   padding: nth($spacing, 4) 0px;
-  background: yellow;
+  background: rgba(nth($color, 3), 0.2);
 
   .project-card {
     min-height: nth($box, 2);
     width: 100%;
     padding: nth($spacing, 3);
-    background: #fff;
+    background: nth($color, 5);
 
     .project-name {
       margin: nth($spacing, 3) 0px;
@@ -318,7 +328,8 @@
         bottom: 0;
         left: 100%;
         right: 0;
-        background-color: #008cba;
+        background: rgba(nth($color, 1), 1);
+
         overflow: hidden;
         width: 0;
         height: 100%;
@@ -331,7 +342,7 @@
       }
 
       .text {
-        color: white;
+        color: nth($color, 5);
         font-size: 20px;
         position: absolute;
         top: 50%;
@@ -343,6 +354,7 @@
 
         a {
           font-size: 1rem;
+          color: nth($color, 5);
         }
         .project-store-link a {
           display: block;
@@ -382,11 +394,14 @@
 }
 
 /* Footer */
-
-.footer-title {
-  text-transform: capitalize;
-  span {
-    font-weight: 500;
+.footer-nav {
+  background: rgba(nth($color, 1), 0.7) !important;
+  color: #fff;
+  .footer-title {
+    text-transform: capitalize;
+    span {
+      font-weight: 500;
+    }
   }
 }
 

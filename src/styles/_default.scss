@@ -99,6 +99,11 @@ section {
   height: fit-content;
 }
 
+input,
+textarea {
+  border-radius: 0px !important;
+}
+
 .btn {
   border-radius: 0px !important;
   height: 40px;
@@ -113,6 +118,7 @@ textarea#contact-form-message {
 }
 
 .section-heading {
+  color: rgba(nth($color, 7), 0.8);
   h1 {
     font-size: 3rem;
     font-weight: 700;

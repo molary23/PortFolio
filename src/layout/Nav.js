@@ -118,7 +118,9 @@ function Nav(props) {
   return (
     <header>
       <nav
-        className={` navbar navbar-expand-sm navbar-light fixed-top top-nav`}
+        className={`${
+          focus ? "change-nav-bg" : ""
+        } navbar navbar-expand-sm navbar-light fixed-top top-nav`}
         data-testid="main-nav"
       >
         <div className="container-fluid">
