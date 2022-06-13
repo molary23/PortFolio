@@ -27,8 +27,8 @@ function Main() {
 
   return (
     <div>
-      {isLoading & (error === null) && <SplashScreen error={error} />}
-      {!isLoading & (error !== null) && <SplashScreen error={error} />}
+      {isLoading & (error === null) ? <SplashScreen error={error} /> : ""}
+      {!isLoading & (error !== null) ? <SplashScreen error={error} /> : ""}
       {!isLoading & (error === null) && (
         <section>
           <Nav

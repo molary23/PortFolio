@@ -158,7 +158,11 @@ textarea#contact-form-message {
     font-weight: 100;
     margin-top: nth($spacing, 3);
     width: 0px;
+  }
+  .animate {
+    width: 100%;
     animation: reveal 7s infinite;
+    animation-iteration-count: 2;
 
     @keyframes reveal {
       0% {

@@ -162,8 +162,14 @@ textarea#contact-form-message {
   font-weight: 100;
   margin-top: 20px;
   width: 0px;
+}
+
+.section-heading .animate {
+  width: 100%;
   -webkit-animation: reveal 7s infinite;
           animation: reveal 7s infinite;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
 }
 
 @-webkit-keyframes reveal {
@@ -812,6 +818,7 @@ textarea#contact-form-message {
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 100;
+  color: #5ea1ed;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {

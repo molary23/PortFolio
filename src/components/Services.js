@@ -3,7 +3,7 @@ import { InfoContext } from "../services/info.services";
 
 function Services(props) {
   const { info } = useContext(InfoContext),
-    { servicesRef } = props;
+    { servicesRef, section } = props;
 
   let services = info.services.map((service, i) => {
     return (
@@ -28,7 +28,9 @@ function Services(props) {
       <div className="my-services">
         <div className="section-heading">
           <h1>My Services</h1>
-          <h2>what I can do for you</h2>
+          <h2 className={`${section === "service" && "animate"}`}>
+            what I can do for you
+          </h2>
         </div>
         <div className="container">
           <div className="row">{services}</div>

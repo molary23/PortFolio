@@ -67,7 +67,7 @@
 
     /* Animation */
     .info-job-role {
-      color: #5ea1ed;
+      color: rgba(nth($color, 6), 1);
       font-family: monospace;
       overflow: hidden;
       border-right: 0.08em solid rgba(nth($color, 8), 0.8);
@@ -469,6 +469,7 @@
     text-transform: capitalize;
     font-size: 1.5rem;
     font-weight: 100;
+    color: rgba(nth($color, 6), 1);
   }
 }
 @import "responsive.scss";

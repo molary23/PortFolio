@@ -8,7 +8,7 @@ import Modal from "../layout/Modal";
 const API_PATH =
   "file:///Users/schoolofdisciples/Desktop/App/Port/my-port/info.php";
 function Contact(props) {
-  const { contactRef } = props,
+  const { contactRef, section } = props,
     [inputs, setInputs] = useState({}),
     [errors, setErrors] = useState({}),
     [loading, setLoading] = useState(false),
@@ -144,7 +144,9 @@ function Contact(props) {
       <div className="contact-me">
         <div className="section-heading">
           <h1>Contact Me</h1>
-          <h2>get in touch</h2>
+          <h2 className={`${section === "contact" && "animate"}`}>
+            get in touch
+          </h2>
         </div>
 
         <div className="container">

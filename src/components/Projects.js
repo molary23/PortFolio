@@ -3,7 +3,7 @@ import { InfoContext } from "../services/info.services";
 
 function Projects(props) {
   const { info } = useContext(InfoContext),
-    { projectsRef } = props;
+    { projectsRef, section } = props;
 
   let max = 9,
     more = false,
@@ -93,7 +93,9 @@ function Projects(props) {
       <div className="my-projects">
         <div className="section-heading">
           <h1>My Projects</h1>
-          <h2>Jobs I've done</h2>
+          <h2 className={`${section === "projects" && "animate"}`}>
+            Jobs I've done
+          </h2>
         </div>
         <div className="container">
           <div className="row">{projects}</div>

@@ -14,9 +14,11 @@ export const InfoContextProvider = ({ children }) => {
       pullInfo().then((result) => {
         setIsLoading(false);
         if (Object.keys(result)[0] === "error") {
-          setError(Object.values(result)[0]);
+          let err = Object.values(result)[0];
+          setError(err);
         } else {
-          setInfo(Object.values(result)[0]);
+          let data = Object.values(result)[0];
+          setInfo(data);
         }
       });
     }, 2000);

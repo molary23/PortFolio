@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { InfoContext } from "../services/info.services";
 
 function Skills(props) {
   const { info } = useContext(InfoContext),
-    { skillsRef } = props;
+    { skillsRef, section } = props;
 
   let skills = info.skills.map((skill, i) => {
     return (
@@ -26,7 +26,9 @@ function Skills(props) {
       <div className="my-skills">
         <div className="section-heading">
           <h1>Skills</h1>
-          <h2>tech stack i use to get the job done</h2>
+          <h2 className={`${section === "skills" && "animate"}`}>
+            tech stack i use to get the job done
+          </h2>
         </div>
 
         <div className="container">

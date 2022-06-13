@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { InfoContext } from "../services/info.services";
 
 function SplashScreen(props) {
   const [title, setTitle] = useState(0),
@@ -14,8 +13,6 @@ function SplashScreen(props) {
     "software developer",
     "mobile app developer",
   ];
-
-  console.log("first");
 
   const randomiseArray = (array) => {
     setInterval(() => {
