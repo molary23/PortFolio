@@ -1,11 +1,23 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 function Nav(props) {
-  const { homeRef, aboutRef, skillsRef, projectsRef, servicesRef, contactRef } =
-      props,
+  const {
+      homeRef,
+      aboutRef,
+      skillsRef,
+      projectsRef,
+      servicesRef,
+      contactRef,
+      onScroll,
+    } = props,
     [display, setDisplay] = useState(false),
     [isActive, setIsActive] = useState(1),
-    [focus, setFocus] = useState(false);
+    [focus, setFocus] = useState(false),
+    executedRef = useRef(false);
+
+  const getCurrentSection = (value) => {
+    onScroll(value);
+  };
 
   const addFocus = () => {
     let winScroll = window.scrollY;
@@ -78,26 +90,31 @@ function Nav(props) {
       winScroll >= about.offsetTop &&
       winScroll < about.offsetTop + about.clientHeight
     ) {
+      getCurrentSection("about");
       setIsActive((isActive) => 1);
     } else if (
       winScroll >= skills.offsetTop &&
       winScroll < skills.offsetTop + skills.clientHeight
     ) {
+      getCurrentSection("skills");
       setIsActive((isActive) => 2);
     } else if (
       winScroll >= projects.offsetTop &&
       winScroll < projects.offsetTop + projects.clientHeight
     ) {
+      getCurrentSection("projects");
       setIsActive((isActive) => 3);
     } else if (
       winScroll >= service.offsetTop &&
       winScroll < service.offsetTop + service.clientHeight
     ) {
+      getCurrentSection("service");
       setIsActive((isActive) => 4);
     } else if (
       winScroll >= contact.offsetTop &&
       winScroll < contact.offsetTop + contact.clientHeight
     ) {
+      getCurrentSection("contact");
       setIsActive((isActive) => 5);
     }
   };
@@ -105,10 +122,12 @@ function Nav(props) {
   useLayoutEffect(() => {
     window.addEventListener("scroll", changeFocus, { passive: true });
     window.addEventListener("scroll", addFocus, { passive: true });
+
     return () => {
       window.removeEventListener("scroll", changeFocus);
       window.removeEventListener("scroll", addFocus);
     };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

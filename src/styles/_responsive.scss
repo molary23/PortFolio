@@ -1,4 +1,26 @@
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .home-page {
+    .intro-details {
+      .intro-name {
+        font-size: 2.4rem;
+      }
+      .info-job-role {
+        font-size: 1.4rem;
+      }
+      .intro-buttons button {
+        width: fit-content;
+        i {
+          margin-left: nth($spacing, 2);
+        }
+      }
+    }
+  }
+
+  .contact {
+    .contact-connect-info {
+      padding-left: nth($spacing, 3);
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -9,10 +31,11 @@
 
 @media only screen and (max-width: 479px) {
   .home-page {
+    min-height: fit-content;
     .intro-details {
       margin-top: nth($spacing, 5);
       padding-left: nth($spacing, 3);
-      padding-bottom: nth($spacing, 3);
+      padding-bottom: nth($spacing, 4);
       .intro-name {
         font-size: 2.5rem;
       }
@@ -64,8 +87,15 @@
     }
   }
   .about {
+    width: 90%;
+    margin: nth($spacing, 1) auto;
     .about-image {
       margin-bottom: nth($spacing, 4);
+    }
+  }
+  .section-heading {
+    h2 {
+      font-size: 1rem;
     }
   }
 }

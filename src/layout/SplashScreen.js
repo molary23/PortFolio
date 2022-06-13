@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { InfoContext } from "../services/info.services";
 
-function Loader() {
-  const [title, setTitle] = useState(0);
+function SplashScreen(props) {
+  const [title, setTitle] = useState(0),
+    { error } = props;
   const jobs = [
-    "full stack web developer",
+    "full stack developer",
     "web developer",
     "senior developer",
     "front-end developer",
@@ -12,6 +14,8 @@ function Loader() {
     "software developer",
     "mobile app developer",
   ];
+
+  console.log("first");
 
   const randomiseArray = (array) => {
     setInterval(() => {
@@ -26,17 +30,23 @@ function Loader() {
   }, []);
   return (
     <div className="loader">
-      <div className="section-heading">
+      <div className="loading-section">
         <h1>Hassan A. Adeola</h1>
         <h2 className="loading-title">{jobs[title]}</h2>
-        <div className="loading-bar">
-          <div className="progress">
-            <div className="progress-bar progress-bar-striped"></div>
+        {error === null ? (
+          <div className="loading-bar">
+            <div className="progress">
+              <div className="progress-bar progress-bar-striped"></div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="error-info">
+            <p>Sorry but there has been an Error. Please refresh the page.</p>
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
-export default Loader;
+export default SplashScreen;

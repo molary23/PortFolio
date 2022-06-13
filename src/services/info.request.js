@@ -6,8 +6,8 @@ export const pullInfo = async () => {
     };
     const response = await fetch("info.json", requestOptions);
     const data = await response.json();
-    return data;
+    return { data };
   } catch (error) {
-    return error;
+    return { error };
   }
 };

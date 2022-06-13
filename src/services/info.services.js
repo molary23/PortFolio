@@ -11,17 +11,17 @@ export const InfoContextProvider = ({ children }) => {
 
   const getInfo = () => {
     setTimeout(() => {
-      pullInfo()
-        .then((result) => {
-          setIsLoading(false);
-          setInfo(result);
-        })
-        .catch((error) => {
-          setIsLoading(false);
-          setError(error);
-        });
+      pullInfo().then((result) => {
+        setIsLoading(false);
+        if (Object.keys(result)[0] === "error") {
+          setError(Object.values(result)[0]);
+        } else {
+          setInfo(Object.values(result)[0]);
+        }
+      });
     }, 2000);
   };
+
   useEffect(() => {
     getInfo();
   }, []);

@@ -120,7 +120,7 @@ textarea#contact-form-message {
 
 .section-heading {
   color: rgba(41, 41, 41, 0.8);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -148,16 +148,64 @@ textarea#contact-form-message {
   display: block;
   width: 40px;
   height: 3px;
-  background: #18d26e;
+  background: #05f2cb;
   bottom: -11px;
   left: calc(50% - 20px);
 }
 
 .section-heading h2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
   text-transform: capitalize;
   font-size: 1.5rem;
   font-weight: 100;
-  margin-top: 50px;
+  margin-top: 20px;
+  width: 0px;
+  -webkit-animation: reveal 7s infinite;
+          animation: reveal 7s infinite;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 100%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 100%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
 }
 
 .my-card {
@@ -209,6 +257,10 @@ textarea#contact-form-message {
   transition: background-color 500ms ease-in;
 }
 
+.top-nav .nav-link {
+  cursor: pointer;
+}
+
 .top-nav .nav-link:after {
   content: "";
   display: block;
@@ -251,7 +303,7 @@ textarea#contact-form-message {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 400px;
+  min-height: 600px;
   padding: 50px 0px 0px;
 }
 
@@ -710,6 +762,12 @@ textarea#contact-form-message {
   min-height: 700px;
 }
 
+.loader h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
 .loader .loading-bar {
   width: 20%;
   margin: 20px auto 0px;
@@ -751,6 +809,29 @@ textarea#contact-form-message {
 
 .loader .loading-title {
   font-family: monospace;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .home-page .intro-details .intro-name {
+    font-size: 2.4rem;
+  }
+  .home-page .intro-details .info-job-role {
+    font-size: 1.4rem;
+  }
+  .home-page .intro-details .intro-buttons button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home-page .intro-details .intro-buttons button i {
+    margin-left: 10px;
+  }
+  .contact .contact-connect-info {
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -760,10 +841,15 @@ textarea#contact-form-message {
 }
 
 @media only screen and (max-width: 479px) {
+  .home-page {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
   .home-page .intro-details {
     margin-top: 80px;
     padding-left: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
   }
   .home-page .intro-details .intro-name {
     font-size: 2.5rem;
@@ -810,8 +896,15 @@ textarea#contact-form-message {
   .contact .contact-connect-info {
     padding-left: 20px;
   }
+  .about {
+    width: 90%;
+    margin: 0px auto;
+  }
   .about .about-image {
     margin-bottom: 50px;
+  }
+  .section-heading h2 {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

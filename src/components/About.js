@@ -3,7 +3,8 @@ import { InfoContext } from "../services/info.services";
 
 function About(props) {
   const { info } = useContext(InfoContext),
-    { aboutRef } = props;
+    { aboutRef, section } = props;
+  console.log(section);
   return (
     <div className="about" ref={aboutRef}>
       <div className="about-me">

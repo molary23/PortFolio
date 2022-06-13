@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useState } from "react";
 import Nav from "./Nav";
 import Home from "../components/Home";
 import Footer from "./Footer";
@@ -7,7 +7,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
-import Loader from "./Loader";
+import SplashScreen from "./SplashScreen";
 
 import { InfoContext } from "../services/info.services";
 
@@ -18,12 +18,18 @@ function Main() {
     projectsRef = useRef(),
     servicesRef = useRef(),
     contactRef = useRef(),
-    { isLoading } = useContext(InfoContext);
+    { isLoading, error } = useContext(InfoContext),
+    [section, setSection] = useState("null");
+
+  const changeSection = (value) => {
+    setSection(value);
+  };
+
   return (
     <div>
-      {isLoading ? (
-        <Loader />
-      ) : (
+      {isLoading & (error === null) && <SplashScreen error={error} />}
+      {!isLoading & (error !== null) && <SplashScreen error={error} />}
+      {!isLoading & (error === null) && (
         <section>
           <Nav
             {...{
@@ -34,13 +40,14 @@ function Main() {
               servicesRef,
               contactRef,
             }}
+            onScroll={changeSection}
           />
           <Home homeRef={homeRef} contactRef={contactRef} />
-          <About aboutRef={aboutRef} />
-          <Skills skillsRef={skillsRef} />
-          <Projects projectsRef={projectsRef} />
-          <Services servicesRef={servicesRef} />
-          <Contact contactRef={contactRef} />
+          <About {...{ aboutRef, section }} />
+          <Skills {...{ skillsRef, section }} />
+          <Projects {...{ projectsRef, section }} />
+          <Services {...{ servicesRef, section }} />
+          <Contact {...{ contactRef, section }} />
           <Footer />
         </section>
       )}

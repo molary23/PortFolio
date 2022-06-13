@@ -119,6 +119,8 @@ textarea#contact-form-message {
 
 .section-heading {
   color: rgba(nth($color, 7), 0.8);
+  margin-bottom: nth($spacing, 2);
+  text-align: center;
   h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -141,20 +143,44 @@ textarea#contact-form-message {
       display: block;
       width: 40px;
       height: 3px;
-      background: #18d26e;
+      background: rgba(nth($color, 8), 1);
       bottom: -11px;
       left: calc(50% - 20px);
     }
   }
 
   h2 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
     text-transform: capitalize;
     font-size: 1.5rem;
     font-weight: 100;
-    margin-top: nth($spacing, 4);
+    margin-top: nth($spacing, 3);
+    width: 0px;
+    animation: reveal 7s infinite;
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        width: 0px;
+      }
+      20% {
+        opacity: 1;
+        width: 0px;
+      }
+      30% {
+        width: 100%;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        width: 100%;
+      }
+    }
   }
-  margin-bottom: nth($spacing, 4);
-  text-align: center;
 }
 
 .my-card {

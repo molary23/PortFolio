@@ -5,6 +5,7 @@
   padding-right: nth($spacing, 2);
   transition: background-color 500ms ease-in;
   .nav-link {
+    cursor: pointer;
     &:after {
       content: "";
       display: block;
@@ -44,7 +45,7 @@
 .home-page {
   background: rgba(nth($color, 2), 0.2);
   height: fit-content;
-  min-height: nth($box, 2);
+  min-height: nth($box, 3);
   padding: nth($spacing, 4) nth($spacing, 1) 0px;
 
   .intro-details {
@@ -419,6 +420,12 @@
   padding-top: nth($box, 2) - 100px;
   min-height: 700px;
 
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: nth($spacing, 3);
+  }
+
   .loading-bar {
     width: 20%;
     margin: nth($spacing, 3) auto nth($spacing, 1);
@@ -459,6 +466,9 @@
   }
   .loading-title {
     font-family: monospace;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 100;
   }
 }
 @import "responsive.scss";

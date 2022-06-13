@@ -16,7 +16,7 @@ function Home(props) {
     <div className="home-page" ref={homeRef}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-7">
+          <div className="col-lg-7 col-md-7">
             <div className="intro-details">
               <h1 className="intro-name" translate="no">
                 {info.about.name}
@@ -37,7 +37,7 @@ function Home(props) {
               </div>
             </div>
           </div>
-          <div className="col-lg-5 d-none d-sm-block">
+          <div className="col-lg-5 col-md-5 d-none d-sm-block">
             <div className="intro-image">
               <img
                 src={info.about.image}
