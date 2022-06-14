@@ -1,13 +1,14 @@
-import React, { useState, createContext, useEffect, useMemo } from "react";
+import React, { useState, createContext, useEffect, useRef } from "react";
 import { pullInfo } from "./info.request";
 const URL = "https://www.hassanadeola.com/outbox/info.json";
 
 export const InfoContext = createContext();
 
 export const InfoContextProvider = ({ children }) => {
-  const [info, setInfo] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [info, setInfo] = useState({}),
+    [isLoading, setIsLoading] = useState(true),
+    [error, setError] = useState(null),
+    executedRef = useRef(false);
 
   const getInfo = () => {
     setTimeout(() => {
@@ -25,7 +26,11 @@ export const InfoContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    if (executedRef.current) {
+      return;
+    }
     getInfo();
+    executedRef.current = true;
   }, []);
 
   return (

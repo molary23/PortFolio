@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 
+import logo from "../asset/images/hassanadeola-logo.png";
+
 function Nav(props) {
   const {
       homeRef,
@@ -12,8 +14,7 @@ function Nav(props) {
     } = props,
     [display, setDisplay] = useState(false),
     [isActive, setIsActive] = useState(1),
-    [focus, setFocus] = useState(false),
-    executedRef = useRef(false);
+    [focus, setFocus] = useState(false);
 
   const getCurrentSection = (value) => {
     onScroll(value);
@@ -141,7 +142,7 @@ function Nav(props) {
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            <img src={"logo"} alt="Hassan Adeola Logo" className="nav-logo" />
+            <img src={logo} alt="Hassan Adeola Logo" className="nav-logo" />
           </a>
           <button
             className="navbar-toggler"

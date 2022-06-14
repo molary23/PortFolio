@@ -220,7 +220,7 @@ function Contact(props) {
                       />
                     </div>
                   </div>
-                  <button type="submit" className="btn regular-btn">
+                  <button type="submit" className="btn outline-btn">
                     Send Message
                     {loading && (
                       <i className="fa-solid fa-circle-notch fa-spin" />

@@ -256,6 +256,10 @@ textarea#contact-form-message {
   transition: all 1s ease;
 }
 
+.nav-logo {
+  width: 3.5%;
+}
+
 .top-nav {
   background: transparent;
   padding-right: 10px;
