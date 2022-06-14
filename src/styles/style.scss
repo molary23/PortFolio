@@ -257,7 +257,7 @@
   background: rgba(nth($color, 2), 0.4);
 
   .service-card {
-    min-height: nth($box, 2);
+    min-height: nth($box, 4) - 100px;
     width: 100%;
     padding: nth($spacing, 4) nth($spacing, 3);
     background: nth($color, 5);

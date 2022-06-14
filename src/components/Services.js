@@ -16,7 +16,13 @@ function Services(props) {
             <h3>{service.name}</h3>
           </div>
           <div className="service-content">
-            <p>{service.content}</p>
+            {service.content.map((item, i) => {
+              return (
+                <p className="service-content-paragraph" key={i}>
+                  {item}
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>

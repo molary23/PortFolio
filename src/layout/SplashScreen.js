@@ -15,10 +15,11 @@ function SplashScreen(props) {
   ];
 
   const randomiseArray = (array) => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       let job = Math.floor(Math.random() * array.length);
       setTitle(job);
     }, 1000);
+    return () => clearInterval(interval);
   };
 
   useEffect(() => {
