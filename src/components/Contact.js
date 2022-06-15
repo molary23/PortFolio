@@ -5,8 +5,7 @@ import TextAreaField from "../layout/TextAreaField";
 import TextInputField from "../layout/TextInputField";
 import Modal from "../layout/Modal";
 
-const API_PATH =
-  "file:///Users/schoolofdisciples/Desktop/App/Port/my-port/info.php";
+const API_PATH = "https://www.hassanadeola.com/outbox/send.php";
 function Contact(props) {
   const { contactRef, section } = props,
     [inputs, setInputs] = useState({}),
@@ -112,9 +111,9 @@ function Contact(props) {
         phone: inputs.phone,
         subject: inputs.subject,
         message: inputs.message,
+        apiKey: process.env.REACT_APP_SECURE_POST_KEY,
         send: "message",
       };
-      console.log(message);
 
       try {
         const requestOptions = {
@@ -125,8 +124,9 @@ function Contact(props) {
         const response = await fetch(API_PATH, requestOptions);
         const data = await response.json();
 
-        console.log(data);
-        if (response.data === 1) {
+        console.log(data, response);
+
+        if (data === 1) {
           setInputs({});
           setLoading(false);
           setSender("success");

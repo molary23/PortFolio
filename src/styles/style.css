@@ -256,8 +256,8 @@ textarea#contact-form-message {
   transition: all 1s ease;
 }
 
-.nav-logo {
-  width: 3.5%;
+.navbar-brand {
+  width: 2.5%;
 }
 
 .top-nav {
@@ -434,6 +434,17 @@ textarea#contact-form-message {
 
 .about .about-info {
   margin-bottom: 20px;
+}
+
+.about .about-image {
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+
+.about .about-image img {
+  -webkit-filter: drop-shadow(1px 1px 3px #252525);
+          filter: drop-shadow(1px 1px 3px #252525);
 }
 
 /* Skills */
@@ -852,6 +863,9 @@ textarea#contact-form-message {
 }
 
 @media only screen and (max-width: 479px) {
+  .navbar-brand {
+    width: 10%;
+  }
   .home-page {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;

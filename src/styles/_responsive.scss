@@ -30,6 +30,9 @@
 }
 
 @media only screen and (max-width: 479px) {
+  .navbar-brand {
+    width: 10%;
+  }
   .home-page {
     min-height: fit-content;
     .intro-details {

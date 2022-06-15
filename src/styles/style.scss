@@ -135,6 +135,14 @@
   .about-info {
     margin-bottom: nth($spacing, 3);
   }
+  .about-image {
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: nth($spacing, 4);
+    img {
+      filter: drop-shadow(1px 1px 3px rgb(37, 37, 37));
+    }
+  }
 }
 
 /* Skills */
