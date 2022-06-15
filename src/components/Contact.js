@@ -100,7 +100,7 @@ function Contact(props) {
       inputs.message === ""
     ) {
       setErrors({
-        message: "What is a Message without content?",
+        message: "Please enter the content of your Message.",
       });
     } else {
       setLoading(true);

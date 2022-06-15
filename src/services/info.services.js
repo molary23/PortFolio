@@ -12,7 +12,6 @@ export const InfoContextProvider = ({ children }) => {
   const getInfo = () => {
     pullInfo().then((result) => {
       setIsLoading(false);
-      console.log(result);
       if (Object.keys(result)[0] === "error") {
         let err = Object.values(result)[0];
         setError(err);

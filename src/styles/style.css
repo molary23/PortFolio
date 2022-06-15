@@ -882,12 +882,12 @@ textarea#contact-form-message {
   .home-page .intro-details .info-job-role {
     font-size: 1rem;
   }
-  .home-page .intro-details .intro-buttons button {
+  .home-page .intro-details .intro-buttons .btn {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-  .home-page .intro-details .intro-buttons button i {
+  .home-page .intro-details .intro-buttons .btn i {
     margin-left: 10px;
   }
   .skills .skill-card {
@@ -930,6 +930,12 @@ textarea#contact-form-message {
   }
   .section-heading h2 {
     font-size: 1rem;
+  }
+  .loading-section {
+    padding: 0px 20px;
+  }
+  .loading-section h1 {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
