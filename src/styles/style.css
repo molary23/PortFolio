@@ -391,13 +391,13 @@ textarea#contact-form-message {
   }
 }
 
-.home-page .intro-buttons button {
+.home-page .intro-buttons .btn {
   width: 30%;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-.home-page .intro-buttons button span {
+.home-page .intro-buttons .btn span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -29,11 +29,15 @@ function Home(props) {
                 <button className="btn regular-btn" onClick={toContact}>
                   <span>Hire Me</span>
                 </button>
-                <button className="btn outline-btn">
+                <a
+                  type="button"
+                  href="https://www.hassanadeola.com/resume/"
+                  className="btn outline-btn"
+                >
                   <span>
                     View Resume <i className="fa-solid fa-chevron-right" />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
