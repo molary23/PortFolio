@@ -251,7 +251,7 @@
     {
       "name": "full stack web development",
       "content": [
-        "For projects that require end-to-end or full-cycle management, the full-stack development technique is frequently utilized. This method entails creating a front-end application and a back-end application that communicates with one another.",
+        "For projects that require full-cycle management, the full-stack development technique is frequently utilized. This method entails creating a front-end application and a back-end application that communicates with one another.",
         "I can create a beautiful front-end application using HTML, CSS/SASS, and Javascript frameworks like ReactJS or jQuery. I can also develop backend APIs with NodeJS and Express, as well as a REST API with PHP.",
         "With these tools, I had been able to develop several services that relied on authentication and a database such as MySQL or MongoDB."
       ],

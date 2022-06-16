@@ -33,6 +33,8 @@ function Home(props) {
                   type="button"
                   href="https://www.hassanadeola.com/resume/"
                   className="btn outline-btn"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <span>
                     View Resume <i className="fa-solid fa-chevron-right" />
