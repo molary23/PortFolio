@@ -51,7 +51,7 @@
   .intro-details {
     margin-top: nth($spacing, 4) * 4;
     text-transform: capitalize;
-
+    margin-bottom: nth($spacing, 5);
     .intro-name {
       font-size: 4rem;
       letter-spacing: -3.5px;
