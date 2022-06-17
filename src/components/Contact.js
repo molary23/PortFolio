@@ -11,7 +11,7 @@ function Contact(props) {
     [inputs, setInputs] = useState({}),
     [errors, setErrors] = useState({}),
     [loading, setLoading] = useState(false),
-    [modal, setModal] = useState(true),
+    [modal, setModal] = useState(false),
     [sender, setSender] = useState(null),
     { info } = useContext(InfoContext);
 

@@ -317,7 +317,7 @@ textarea#contact-form-message {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 600px;
+  min-height: 400px;
   padding: 50px 0px 0px;
 }
 
@@ -414,7 +414,7 @@ textarea#contact-form-message {
 }
 
 .home-page .intro-image {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .home-page .intro-image img {
@@ -848,19 +848,25 @@ textarea#contact-form-message {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .home-page .intro-details {
+    margin-top: 160px;
+  }
   .home-page .intro-details .intro-name {
     font-size: 2.4rem;
   }
   .home-page .intro-details .info-job-role {
     font-size: 1.4rem;
   }
-  .home-page .intro-details .intro-buttons button {
+  .home-page .intro-details .intro-buttons .btn {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-  .home-page .intro-details .intro-buttons button i {
+  .home-page .intro-details .intro-buttons .btn i {
     margin-left: 10px;
+  }
+  .home-page .intro-image {
+    margin-top: 50px;
   }
   .contact .contact-connect-info {
     padding-left: 20px;

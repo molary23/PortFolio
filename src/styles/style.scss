@@ -45,7 +45,7 @@
 .home-page {
   background: rgba(nth($color, 2), 0.2);
   height: fit-content;
-  min-height: nth($box, 3);
+  min-height: nth($box, 2);
   padding: nth($spacing, 4) nth($spacing, 1) 0px;
 
   .intro-details {
@@ -112,7 +112,7 @@
   }
 
   .intro-image {
-    margin-top: nth($spacing, 4);
+    margin-top: nth($spacing, 5);
 
     img {
       width: 70%;
