@@ -243,6 +243,9 @@
     i {
       margin-right: 15px;
       color: rgba(nth($color, 1), 0.7);
+      &:hover {
+        filter: invert(1);
+      }
     }
   }
 
@@ -251,6 +254,7 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid rgba(nth($color, 5), 1);
+    box-shadow: 0px 2px 1px 1px rgba(38, 59, 94, 0.2);
 
     i {
       margin-left: nth($spacing, 2) / 2;

@@ -11,7 +11,7 @@ function Contact(props) {
     [inputs, setInputs] = useState({}),
     [errors, setErrors] = useState({}),
     [loading, setLoading] = useState(false),
-    [modal, setModal] = useState(false),
+    [modal, setModal] = useState(true),
     [sender, setSender] = useState(null),
     { info } = useContext(InfoContext);
 
@@ -123,11 +123,13 @@ function Contact(props) {
         };
         const response = await fetch(URL, requestOptions);
         const data = await response.json();
-
+        setLoading(false);
         if (data === 1) {
           setInputs({});
-          setLoading(false);
           setSender("success");
+          setModal(true);
+        } else {
+          setSender("error");
           setModal(true);
         }
       } catch (error) {
@@ -218,7 +220,7 @@ function Contact(props) {
                       />
                     </div>
                   </div>
-                  <button type="submit" className="btn outline-btn">
+                  <button type="submit" className="btn outline-btn contact-btn">
                     Send Message
                     {loading && (
                       <i className="fa-solid fa-circle-notch fa-spin" />

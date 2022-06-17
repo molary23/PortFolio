@@ -260,6 +260,10 @@ textarea#contact-form-message {
   width: 2.5%;
 }
 
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .top-nav {
   background: transparent;
   padding-right: 10px;
@@ -572,6 +576,11 @@ textarea#contact-form-message {
   color: rgba(0, 119, 182, 0.7);
 }
 
+.contact .connect-info-card i:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .contact .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,6 +592,8 @@ textarea#contact-form-message {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid white;
+  -webkit-box-shadow: 0px 2px 1px 1px rgba(38, 59, 94, 0.2);
+          box-shadow: 0px 2px 1px 1px rgba(38, 59, 94, 0.2);
 }
 
 .contact .btn i {
