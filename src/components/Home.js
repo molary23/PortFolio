@@ -30,7 +30,6 @@ function Home(props) {
                   <span>Hire Me</span>
                 </button>
                 <a
-                  type="button"
                   href="https://www.hassanadeola.com/resume/"
                   className="btn outline-btn"
                   target="_blank"

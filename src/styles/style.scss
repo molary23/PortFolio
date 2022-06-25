@@ -101,7 +101,7 @@
   }
 
   .intro-buttons .btn {
-    width: 30%;
+    width: fit-content;
     margin-right: nth($spacing, 2);
     margin-bottom: nth($spacing, 2);
     span {
