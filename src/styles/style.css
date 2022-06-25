@@ -397,7 +397,9 @@ textarea#contact-form-message {
 }
 
 .home-page .intro-buttons .btn {
-  width: 30%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -782,6 +784,7 @@ textarea#contact-form-message {
 
 .footer-nav .footer-title {
   text-transform: capitalize;
+  margin: 10px 0px;
 }
 
 .footer-nav .footer-title span {
@@ -898,7 +901,7 @@ textarea#contact-form-message {
     font-size: 2.5rem;
   }
   .home-page .intro-details .info-job-role {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .home-page .intro-details .intro-buttons .btn {
     width: -webkit-fit-content;

@@ -418,8 +418,10 @@
 .footer-nav {
   background: rgba(nth($color, 1), 0.7) !important;
   color: #fff;
+
   .footer-title {
     text-transform: capitalize;
+    margin: 10px 0px;
     span {
       font-weight: 500;
     }
