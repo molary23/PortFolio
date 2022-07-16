@@ -27,9 +27,9 @@ function Main() {
 
   return (
     <div>
-      {isLoading & (error === null) ? <SplashScreen error={error} /> : ""}
-      {!isLoading & (error !== null) ? <SplashScreen error={error} /> : ""}
-      {!isLoading & (error === null) && (
+      {isLoading & (error === null) ? <SplashScreen error={error} /> : null}
+      {!isLoading & (error !== null) ? <SplashScreen error={error} /> : null}
+      {!isLoading & (error === null) ? (
         <section>
           <Nav
             {...{
@@ -50,7 +50,7 @@ function Main() {
           <Contact {...{ contactRef, section }} />
           <Footer />
         </section>
-      )}
+      ) : null}
     </div>
   );
 }
