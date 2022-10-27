@@ -7,7 +7,7 @@ function Skills(props) {
 
   let skills = info.skills.map((skill, i) => {
     return (
-      <div className="col-lg-3 col-sm-4 col-6" key={i}>
+      <div className="col-lg-3 col-sm-4 col-6 skill-holder" key={i}>
         <div className="skill-card my-card">
           <div className="skill-image">
             <img src={skill.image} alt={skill.name} />

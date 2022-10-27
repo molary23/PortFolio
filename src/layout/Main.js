@@ -1,4 +1,5 @@
 import React, { useRef, useContext, useState } from "react";
+
 import Nav from "./Nav";
 import Home from "../components/Home";
 import Footer from "./Footer";
@@ -24,7 +25,6 @@ function Main() {
   const changeSection = (value) => {
     setSection(value);
   };
-
   return (
     <div>
       {isLoading & (error === null) ? <SplashScreen error={error} /> : null}

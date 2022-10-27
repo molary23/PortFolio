@@ -232,7 +232,7 @@ textarea#contact-form-message {
 
 .hidden {
   opacity: 0;
-  transition: all 1s;
+  transition: all 200ms;
   translate: -100%;
   filter: blur(5px);
 }
@@ -240,4 +240,8 @@ textarea#contact-form-message {
   opacity: 1;
   translate: 0;
   filter: blur(0);
+}
+
+.about-image {
+  transition-delay: 10s;
 }
