@@ -31,10 +31,10 @@ function Services(props) {
 
   return (
     <div className="services" ref={servicesRef}>
-      <div className="my-services">
+      <div className="my-services hidden">
         <div className="section-heading">
           <h1>My Services</h1>
-          <h2 className={`${section === "service" && "animate"}`}>
+          <h2 className={`${section === "service" ? "animate" : ""}`}>
             what I can do for you
           </h2>
         </div>

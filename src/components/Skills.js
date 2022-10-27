@@ -23,10 +23,10 @@ function Skills(props) {
 
   return (
     <div className="skills" ref={skillsRef}>
-      <div className="my-skills">
+      <div className="my-skills hidden">
         <div className="section-heading">
           <h1>Skills</h1>
-          <h2 className={`${section === "skills" && "animate"}`}>
+          <h2 className={`${section === "skills" ? "animate" : ""}`}>
             tech stack i use to get the job done
           </h2>
         </div>

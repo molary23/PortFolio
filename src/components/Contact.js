@@ -141,10 +141,10 @@ function Contact(props) {
 
   return (
     <div className="contact" ref={contactRef}>
-      <div className="contact-me">
+      <div className="contact-me hidden">
         <div className="section-heading">
           <h1>Contact Me</h1>
-          <h2 className={`${section === "contact" && "animate"}`}>
+          <h2 className={`${section === "contact" ? "animate" : ""}`}>
             get in touch
           </h2>
         </div>

@@ -90,10 +90,10 @@ function Projects(props) {
 
   return (
     <div className="projects" ref={projectsRef}>
-      <div className="my-projects">
+      <div className="my-projects hidden">
         <div className="section-heading">
           <h1>My Projects</h1>
-          <h2 className={`${section === "projects" && "animate"}`}>
+          <h2 className={`${section === "projects" ? "animate" : ""}`}>
             Jobs I've done
           </h2>
         </div>

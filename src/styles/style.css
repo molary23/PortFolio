@@ -10,8 +10,7 @@
   1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
@@ -123,14 +122,12 @@ textarea#contact-form-message {
   margin-bottom: 10px;
   text-align: center;
 }
-
 .section-heading h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
   position: relative;
 }
-
 .section-heading h1:before {
   content: "";
   position: absolute;
@@ -141,7 +138,6 @@ textarea#contact-form-message {
   bottom: -10px;
   left: calc(50% - 60px);
 }
-
 .section-heading h1:after {
   content: "";
   position: absolute;
@@ -152,7 +148,6 @@ textarea#contact-form-message {
   bottom: -11px;
   left: calc(50% - 20px);
 }
-
 .section-heading h2 {
   display: inline-block;
   overflow: hidden;
@@ -163,7 +158,6 @@ textarea#contact-form-message {
   margin-top: 20px;
   width: 0px;
 }
-
 .section-heading .animate {
   width: 100%;
   -webkit-animation: reveal 7s infinite;
@@ -171,7 +165,6 @@ textarea#contact-form-message {
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
 }
-
 @-webkit-keyframes reveal {
   0% {
     opacity: 0;
@@ -192,7 +185,6 @@ textarea#contact-form-message {
     width: 100%;
   }
 }
-
 @keyframes reveal {
   0% {
     opacity: 0;
@@ -215,45 +207,37 @@ textarea#contact-form-message {
 }
 
 .my-card {
-  -webkit-box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
-          box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
+  box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.2);
   border-radius: 5px;
   margin: 20px;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-
 .my-card:hover {
-  -webkit-transform: scale(1.06);
   transform: scale(1.06);
 }
 
 .regular-btn {
   border: 1px solid #0077b6;
   color: #0077b6;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
 }
-
 .regular-btn:hover {
   background: #0077b6;
   color: #fff;
-  font-weight: 500;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
 .outline-btn {
   border: 1px solid #0077b6;
   background: #0077b6;
   color: #fff;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
 }
-
 .outline-btn:hover {
   border: 1px solid #0077b6;
   background: #fff;
   color: #0077b6;
-  font-weight: 500;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
 .navbar-brand {
@@ -264,17 +248,27 @@ textarea#contact-form-message {
   background: rgba(0, 0, 0, 0.6);
 }
 
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  translate: -100%;
+  filter: blur(5px);
+}
+
+.show {
+  opacity: 1;
+  translate: 0;
+  filter: blur(0);
+}
+
 .top-nav {
   background: transparent;
   padding-right: 10px;
-  -webkit-transition: background-color 500ms ease-in;
   transition: background-color 500ms ease-in;
 }
-
 .top-nav .nav-link {
   cursor: pointer;
 }
-
 .top-nav .nav-link:after {
   content: "";
   display: block;
@@ -282,15 +276,12 @@ textarea#contact-form-message {
   height: 3px;
   width: 0px;
   background: transparent;
-  -webkit-transition: width 500ms ease, background-color 500ms ease;
   transition: width 500ms ease, background-color 500ms ease;
 }
-
 .top-nav .nav-link:hover:after {
   width: 100%;
   background: #05f2cb;
 }
-
 .top-nav .active-nav:after {
   content: "";
   display: block;
@@ -299,7 +290,6 @@ textarea#contact-form-message {
   width: 100%;
   background: #05f2cb;
 }
-
 .top-nav button.navbar-toggler {
   border: none;
 }
@@ -307,7 +297,6 @@ textarea#contact-form-message {
 .change-nav-bg {
   background: #97c6fc;
 }
-
 .change-nav-bg .nav-link {
   color: #fff !important;
 }
@@ -320,7 +309,6 @@ textarea#contact-form-message {
   min-height: 400px;
   padding: 50px 0px 0px;
 }
-
 .home-page .intro-details {
   margin-top: 200px;
   text-transform: capitalize;
@@ -329,14 +317,12 @@ textarea#contact-form-message {
   /* The typing effect */
   /* The typewriter cursor effect */
 }
-
 .home-page .intro-details .intro-name {
   font-size: 4rem;
   letter-spacing: -3.5px;
   font-weight: 600;
   color: rgba(41, 41, 41, 0.8);
 }
-
 .home-page .intro-details .info-role {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -344,7 +330,6 @@ textarea#contact-form-message {
   height: 30px;
   margin-bottom: 20px;
 }
-
 .home-page .intro-details .info-job-role {
   color: #5ea1ed;
   font-family: monospace;
@@ -357,7 +342,6 @@ textarea#contact-form-message {
           animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   font-size: 1.35rem;
 }
-
 @-webkit-keyframes typing {
   from {
     width: 0;
@@ -366,7 +350,6 @@ textarea#contact-form-message {
     width: 100%;
   }
 }
-
 @keyframes typing {
   from {
     width: 0;
@@ -375,27 +358,22 @@ textarea#contact-form-message {
     width: 100%;
   }
 }
-
 @-webkit-keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
     border-color: rgba(5, 242, 203, 0.8);
   }
 }
-
 @keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
     border-color: rgba(5, 242, 203, 0.8);
   }
 }
-
 .home-page .intro-buttons .btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -403,28 +381,18 @@ textarea#contact-form-message {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-
 .home-page .intro-buttons .btn span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 .home-page .intro-image {
   margin-top: 80px;
 }
-
 .home-page .intro-image img {
   width: 70%;
   margin: 0px auto;
-  -webkit-filter: drop-shadow(1px 1px 3px #252525);
-          filter: drop-shadow(1px 1px 3px #252525);
+  filter: drop-shadow(1px 1px 3px rgb(37, 37, 37));
 }
 
 /* About Me */
@@ -433,25 +401,20 @@ textarea#contact-form-message {
   background: #fff;
   padding: 80px 0px;
 }
-
 .about .about-me {
   text-align: justify;
   margin: 0 auto;
 }
-
 .about .about-info {
   margin-bottom: 20px;
 }
-
 .about .about-image {
   width: 70%;
   margin: 0px auto;
   margin-bottom: 50px;
 }
-
 .about .about-image img {
-  -webkit-filter: drop-shadow(1px 1px 3px #252525);
-          filter: drop-shadow(1px 1px 3px #252525);
+  filter: drop-shadow(1px 1px 3px rgb(37, 37, 37));
 }
 
 /* Skills */
@@ -460,11 +423,9 @@ textarea#contact-form-message {
   background: rgba(151, 198, 252, 0.7);
   padding: 80px 0px;
 }
-
 .skills .my-skills {
   text-align: center;
 }
-
 .skills .skill-card {
   border: 0.5px solid #fff;
   height: 200px;
@@ -473,31 +434,24 @@ textarea#contact-form-message {
   padding: 20px;
   background: #fff;
 }
-
 .skills .skill-card .skill-image {
   height: 50%;
 }
-
 .skills .skill-card .skill-image img {
   width: 40%;
   height: auto;
   margin: 0px auto;
-  -webkit-filter: opacity(0.8);
-          filter: opacity(0.8);
+  filter: opacity(0.8);
 }
-
 .skills .skill-card .skill-name {
   margin-top: 20px;
 }
-
 .skills .skill-card:hover {
   background: #0077b6;
   color: #fff;
 }
-
 .skills .skill-card:hover .skill-image img {
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
 }
 
 /* Contact */
@@ -509,25 +463,16 @@ textarea#contact-form-message {
   padding: 50px 0px;
   background: rgba(151, 198, 252, 0.6);
 }
-
 .contact .contact-connect-info {
   margin-top: 50px;
 }
-
 .contact .contact-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   width: 80%;
   margin-bottom: 10px;
 }
-
 .contact .contact-details .contact-icon {
   border-radius: 40px;
   padding: 10px;
@@ -537,68 +482,44 @@ textarea#contact-form-message {
   height: 40px;
   text-align: center;
 }
-
 .contact .contact-details .contact-icon i {
   font-size: 20px;
 }
-
 .contact .contact-details .contact-info {
   margin-left: 20px;
-  color: #292929;
+  color: rgb(41, 41, 41);
   font-weight: 500;
 }
-
 .contact .contact-details .contact-info a {
-  color: #292929;
+  color: rgb(41, 41, 41);
   font-weight: 500;
 }
-
 .contact .contact-details .contact-info a:hover {
   text-decoration: underline;
 }
-
 .contact .contact-details .contact-location {
   text-transform: capitalize;
 }
-
 .contact .connect-info-card {
   margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
-
 .contact .connect-info-card i {
   margin-right: 15px;
   color: rgba(0, 119, 182, 0.7);
 }
-
 .contact .connect-info-card i:hover {
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
 }
-
 .contact .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid white;
-  -webkit-box-shadow: 0px 2px 1px 1px rgba(38, 59, 94, 0.2);
-          box-shadow: 0px 2px 1px 1px rgba(38, 59, 94, 0.2);
+  box-shadow: 0px 2px 1px 1px rgba(38, 59, 94, 0.2);
 }
-
 .contact .btn i {
   margin-left: 5px;
 }
@@ -612,7 +533,6 @@ textarea#contact-form-message {
   padding: 50px 0px;
   background: rgba(151, 198, 252, 0.4);
 }
-
 .services .service-card {
   min-height: 700px;
   width: 100%;
@@ -620,27 +540,22 @@ textarea#contact-form-message {
   background: #fff;
   color: rgba(41, 41, 41, 0.8);
 }
-
 .services .service-image,
 .services .service-name {
   text-align: center;
 }
-
 .services .service-name {
   margin: 20px 0px;
 }
-
 .services .service-name h3 {
   font-weight: 600;
   text-transform: capitalize;
   font-size: 1.25rem;
 }
-
 .services .service-content {
   text-align: justify;
   text-justify: inter-word;
 }
-
 .services .service-image i {
   border-radius: 40px;
   padding: 20px 0px;
@@ -660,41 +575,34 @@ textarea#contact-form-message {
   padding: 50px 0px;
   background: rgba(173, 232, 244, 0.2);
 }
-
 .projects .project-card {
   min-height: 400px;
   width: 100%;
   padding: 20px;
   background: #fff;
 }
-
 .projects .project-card .project-name {
   margin: 20px 0px;
   text-align: center;
 }
-
 .projects .project-card .project-name h3 {
   font-weight: 600;
   text-transform: capitalize;
   font-size: 1.25rem;
 }
-
 .projects .project-card .project-type h5 {
   text-transform: capitalize;
   font-size: 1rem;
 }
-
 .projects .project-card .project-image-container {
   margin-top: 20px;
   position: relative;
 }
-
 .projects .project-card .project-image-container .project-image {
   display: block;
   width: 100%;
   height: auto;
 }
-
 .projects .project-card .project-image-container .overlay {
   position: absolute;
   bottom: 0;
@@ -704,74 +612,54 @@ textarea#contact-form-message {
   overflow: hidden;
   width: 0;
   height: 100%;
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-
 .projects .project-card .project-image-container:hover .overlay {
   width: 100%;
   left: 0;
 }
-
 .projects .project-card .project-image-container .text {
   color: #fff;
   font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
-
 .projects .project-card .project-image-container .text a {
   font-size: 1rem;
   color: #fff;
 }
-
 .projects .project-card .project-image-container .text .project-store-link a {
   display: block;
 }
-
 .projects .project-card .project-image-container .text .project-store-link a .store-name {
   text-transform: capitalize;
 }
-
 .projects .project-card .project-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 60px;
   margin-bottom: 20px;
 }
-
 .projects .project-card .project-details .project-stack {
   margin-left: 10px;
 }
-
 .projects .project-card .project-details .project-title label {
   font-weight: 600;
 }
-
 .projects .project-card .project-details .project-category {
   margin-left: 10px;
 }
-
 .projects .project-card .project-details .project-category p {
   font-weight: 600;
   text-transform: capitalize;
 }
-
 .projects .view-more {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 50px;
 }
-
 .projects .view-more .btn {
   width: 20%;
 }
@@ -781,12 +669,10 @@ textarea#contact-form-message {
   background: rgba(0, 119, 182, 0.7) !important;
   color: #fff;
 }
-
 .footer-nav .footer-title {
   text-transform: capitalize;
   margin: 10px 0px;
 }
-
 .footer-nav .footer-title span {
   font-weight: 500;
 }
@@ -797,30 +683,25 @@ textarea#contact-form-message {
   padding-top: 300px;
   min-height: 700px;
 }
-
 .loader h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
-
 .loader .loading-bar {
   width: 20%;
   margin: 20px auto 0px;
 }
-
 .loader .loading-bar .progress {
   height: 5px;
   border-radius: 0px;
   inset: 0;
 }
-
 .loader .loading-bar .progress-bar {
   position: relative;
   -webkit-animation: progress-indeterminate 3s linear infinite;
   animation: progress-indeterminate 3s linear infinite;
 }
-
 @-webkit-keyframes progress-indeterminate {
   from {
     left: -20%;
@@ -831,7 +712,6 @@ textarea#contact-form-message {
     width: 20%;
   }
 }
-
 @keyframes progress-indeterminate {
   from {
     left: -20%;
@@ -842,7 +722,6 @@ textarea#contact-form-message {
     width: 20%;
   }
 }
-
 .loader .loading-title {
   font-family: monospace;
   text-transform: capitalize;
@@ -876,13 +755,11 @@ textarea#contact-form-message {
     padding-left: 20px;
   }
 }
-
 @media only screen and (max-width: 767px) {
   .skill-card {
     width: 150px;
   }
 }
-
 @media only screen and (max-width: 479px) {
   .navbar-brand {
     width: 10%;
@@ -958,5 +835,4 @@ textarea#contact-form-message {
   .loading-section h1 {
     font-size: 2.5rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

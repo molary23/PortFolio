@@ -35,9 +35,7 @@ function Home(props) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span>
-                    View Resume <i className="fa-solid fa-chevron-right" />
-                  </span>
+                  <span>View Resume</span>
                 </a>
               </div>
             </div>

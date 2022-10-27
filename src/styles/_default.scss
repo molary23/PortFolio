@@ -202,23 +202,23 @@ textarea#contact-form-message {
 .regular-btn {
   border: 1px solid nth($color, 1);
   color: nth($color, 1);
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
   &:hover {
     background: nth($color, 1);
     color: #fff;
-    font-weight: 500;
-    transition: all 1s ease;
   }
 }
 .outline-btn {
   border: 1px solid nth($color, 1);
   background: nth($color, 1);
   color: #fff;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
   &:hover {
     border: 1px solid nth($color, 1);
     background: #fff;
     color: nth($color, 1);
-    font-weight: 500;
-    transition: all 1s ease;
   }
 }
 
@@ -228,4 +228,16 @@ textarea#contact-form-message {
 
 .modal {
   background: rgba($color: #000, $alpha: 0.6);
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  translate: -100%;
+  filter: blur(5px);
+}
+.show {
+  opacity: 1;
+  translate: 0;
+  filter: blur(0);
 }

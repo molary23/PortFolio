@@ -1,4 +1,5 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState, useContext, useEffect } from "react";
+import { InfoContext } from "../services/info.services";
 
 import logo from "../asset/images/hassanadeola-logo.png";
 
@@ -14,7 +15,8 @@ function Nav(props) {
     } = props,
     [display, setDisplay] = useState(false),
     [isActive, setIsActive] = useState(1),
-    [focus, setFocus] = useState(false);
+    [focus, setFocus] = useState(false),
+    { info } = useContext(InfoContext);
 
   const getCurrentSection = (value) => {
     onScroll(value);
@@ -131,6 +133,32 @@ function Nav(props) {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const observeFunction = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    const hiddenElements = [
+      homeRef.current,
+      aboutRef.current,
+      skillsRef.current,
+      projectsRef.current,
+      servicesRef.current,
+      contactRef.current,
+    ];
+    hiddenElements.forEach((el) => observer.observe(el.firstElementChild));
+  };
+
+  useEffect(() => {
+    observeFunction();
+  }, [info]);
 
   return (
     <header>

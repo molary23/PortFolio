@@ -7,10 +7,10 @@ function About(props) {
 
   return (
     <div className="about" ref={aboutRef}>
-      <div className="about-me">
+      <div className="about-me hidden">
         <div className="section-heading">
           <h1>About Me</h1>
-          <h2 className={`${section === "about" && "animate"}`}>
+          <h2 className={`${section === "about" ? "animate" : ""}`}>
             a short story about me
           </h2>
         </div>
