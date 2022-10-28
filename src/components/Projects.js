@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { InfoContext } from "../services/info.services";
+
+import useObserve from "../hooks/useObserve";
 
 function Projects(props) {
   const { info } = useContext(InfoContext),
-    { projectsRef, section } = props;
+    { projectsRef, section } = props,
+    headingRef = useRef(),
+    containerRef = useRef();
+
+  useObserve([headingRef, containerRef]);
 
   let max = 9,
     more = false,
@@ -90,14 +96,14 @@ function Projects(props) {
 
   return (
     <div className="projects" ref={projectsRef}>
-      <div className="my-projects hidden">
-        <div className="section-heading">
+      <div className="my-projects">
+        <div className="section-heading hidden" ref={headingRef}>
           <h1>My Projects</h1>
           <h2 className={`${section === "projects" ? "animate" : ""}`}>
             Jobs I've done
           </h2>
         </div>
-        <div className="container">
+        <div className="container hidden" ref={containerRef}>
           <div className="row">{projects}</div>
         </div>
         {more && (

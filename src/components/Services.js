@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { InfoContext } from "../services/info.services";
+
+import useObserve from "../hooks/useObserve";
 
 function Services(props) {
   const { info } = useContext(InfoContext),
-    { servicesRef, section } = props;
+    { servicesRef, section } = props,
+    headingRef = useRef(),
+    containerRef = useRef();
+
+  useObserve([headingRef, containerRef]);
 
   let services = info.services.map((service, i) => {
     return (
@@ -31,14 +37,14 @@ function Services(props) {
 
   return (
     <div className="services" ref={servicesRef}>
-      <div className="my-services hidden">
-        <div className="section-heading">
+      <div className="my-services">
+        <div className="section-heading hidden" ref={headingRef}>
           <h1>My Services</h1>
           <h2 className={`${section === "service" ? "animate" : ""}`}>
             what I can do for you
           </h2>
         </div>
-        <div className="container">
+        <div className="container hidden" ref={containerRef}>
           <div className="row">{services}</div>
         </div>
       </div>

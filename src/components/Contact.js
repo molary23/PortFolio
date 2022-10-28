@@ -1,5 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { InfoContext } from "../services/info.services";
+
+import useObserve from "../hooks/useObserve";
 
 import TextAreaField from "../layout/TextAreaField";
 import TextInputField from "../layout/TextInputField";
@@ -13,7 +15,12 @@ function Contact(props) {
     [loading, setLoading] = useState(false),
     [modal, setModal] = useState(false),
     [sender, setSender] = useState(null),
-    { info } = useContext(InfoContext);
+    { info } = useContext(InfoContext),
+    headingRef = useRef(),
+    contactFormRef = useRef(),
+    contactInfoRef = useRef();
+
+  useObserve([headingRef, contactFormRef, contactInfoRef]);
 
   let contacts = info.contacts,
     contact = (
@@ -141,8 +148,8 @@ function Contact(props) {
 
   return (
     <div className="contact" ref={contactRef}>
-      <div className="contact-me hidden">
-        <div className="section-heading">
+      <div className="contact-me">
+        <div className="section-heading hidden" ref={headingRef}>
           <h1>Contact Me</h1>
           <h2 className={`${section === "contact" ? "animate" : ""}`}>
             get in touch
@@ -151,13 +158,13 @@ function Contact(props) {
 
         <div className="container">
           <div className="row flex-column-reverse flex-lg-row">
-            <div className="col-lg-5 col-12">
+            <div className="col-lg-5 col-12 hidden" ref={contactInfoRef}>
               <div className="contact-connect-info">
                 <div className="contact-info-card">{contact}</div>
                 <div className="connect-info-card">{connect}</div>
               </div>
             </div>
-            <div className="col-lg-7 col-12">
+            <div className="col-lg-7 col-12 hidden" ref={contactFormRef}>
               <form className="contact-form" onSubmit={submitHandler}>
                 <div className="container">
                   <div className="row">
