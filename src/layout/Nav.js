@@ -132,7 +132,7 @@ function Nav(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useObserve([aboutRef, skillsRef, projectsRef, servicesRef, contactRef]);
+  //useObserve([aboutRef, skillsRef, projectsRef, servicesRef, contactRef]);
 
   return (
     <header>

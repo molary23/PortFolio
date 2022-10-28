@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { InfoContext } from "../services/info.services";
+
+import useObserve from "../hooks/useObserve";
 
 function Skills(props) {
   const { info } = useContext(InfoContext),
-    { skillsRef, section } = props;
+    { skillsRef, section } = props,
+    headingRef = useRef(),
+    cardRef = useRef();
+
+  useObserve([headingRef, cardRef]);
 
   let skills = info.skills.map((skill, i) => {
     return (
@@ -23,8 +29,8 @@ function Skills(props) {
 
   return (
     <div className="skills" ref={skillsRef}>
-      <div className="my-skills hidden">
-        <div className="section-heading">
+      <div className="my-skills">
+        <div className="section-heading hidden" ref={headingRef}>
           <h1>Skills</h1>
           <h2 className={`${section === "skills" ? "animate" : ""}`}>
             tech stack i use to get the job done
@@ -32,7 +38,9 @@ function Skills(props) {
         </div>
 
         <div className="container">
-          <div className="row skill-row">{skills}</div>
+          <div className="row skill-row hidden" ref={cardRef}>
+            {skills}
+          </div>
         </div>
       </div>
     </div>

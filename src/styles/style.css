@@ -250,19 +250,15 @@ textarea#contact-form-message {
 
 .hidden {
   opacity: 0;
-  transition: all 200ms;
-  translate: -100%;
+  transition: 5s;
+  transform: translate(-100%);
   filter: blur(5px);
 }
 
 .show {
   opacity: 1;
-  translate: 0;
+  transform: translate(0);
   filter: blur(0);
-}
-
-.about-image {
-  transition-delay: 10s;
 }
 
 .top-nav {
